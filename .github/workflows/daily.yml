@@ -1,0 +1,60 @@
+name: MS 2026 – Daily Match Cards
+
+on:
+  schedule:
+    # 06:30 UTC = 08:30 SELČ (letní čas) — celý červen a červenec
+    - cron: '30 6 * 6,7 *'
+  workflow_dispatch:    # manuální spuštění pro testování
+    inputs:
+      date_override:
+        description: 'Přepsat datum (YYYY-MM-DD) — prázdné = včerejší datum'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Download flags (only missing ones)
+        working-directory: scripts
+        run: python download_flags.py
+
+      - name: Fetch match results
+        working-directory: scripts
+        env:
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+          DATE_OVERRIDE: ${{ github.event.inputs.date_override }}
+        run: python fetch_matches.py
+
+      - name: Generate index.html
+        working-directory: scripts
+        run: python generate_page.py
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/ matches.json
+          if git diff --cached --quiet; then
+            echo "Nothing to commit — no matches or no changes."
+          else
+            DATE=$(date -u '+%Y-%m-%d')
+            git commit -m "chore: match cards for ${DATE} [skip ci]"
+            git push
+          fi

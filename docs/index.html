@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>MS 2026 – FPL Addicted Výsledky</title>
+<link rel="stylesheet" href="assets/style.css">
+<!-- dom-to-image (primary PNG export) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<!-- html2canvas (fallback) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+<div class="page-header">
+  <h1>⚽ MS 2026 · Výsledky</h1>
+  <div class="date-label">12. června 2026</div>
+</div>
+<div class="match-section">
+
+  <!-- ── Card wrapper (clips scaled card) ── -->
+  <div class="card-wrapper" id="wrapper-999001">
+    <div class="card" id="card-999001" data-match-id="999001">
+
+      <!-- WC 2026 background -->
+      <div class="bg">
+        <div class="bg-purple"></div>
+        <div class="bg-green"></div>
+        <div class="bg-lime"></div>
+      </div>
+
+      <!-- White panel -->
+      <div class="panel">
+        <div class="stripe"></div>
+
+        <!-- Top row: logos + match info -->
+        <div class="top-row">
+          <img class="wc-logo" src="assets/logos/wc2026.png" alt="FIFA WC 2026">
+          <div class="match-meta">
+            <div class="match-round">SKUPINA A · SKUPINOVÁ FÁZE · HRACÍ DEN 1</div>
+            <div class="match-title">MS 2026 · Výsledky</div>
+            <div class="match-date-label">12. června 2026</div>
+          </div>
+          <img class="fpl-logo" src="assets/logos/fpl_addicted.png" alt="FPL Addicted">
+        </div>
+
+        <!-- Score section -->
+        <div class="score-section">
+          <div class="team">
+            <img class="team-flag" src="assets/flags/MX.png" alt="Mexico">
+            <div class="team-name">Mexico</div>
+          </div>
+          <div class="score-display">
+            <span class="score-num">2</span>
+            <span class="score-sep">:</span>
+            <span class="score-num">1</span>
+          </div>
+          <div class="team">
+            <img class="team-flag" src="assets/flags/KR.png" alt="South Korea">
+            <div class="team-name">South Korea</div>
+          </div>
+        </div>
+
+        <!-- Scorers -->
+        <div class="scorers-section">
+  <div class="scorers-col"><div class="scorer-item">H. Lozano <span class="min">23'</span></div>
+<div class="scorer-item">R. Jimenez <span class="min">67'</span></div></div>
+  <div class="scorers-icon">⚽</div>
+  <div class="scorers-col scorers-right"><div class="scorer-item">H. Son <span class="min">45'</span></div></div>
+</div>
+
+        <!-- Photo zone: tap to upload, drag/zoom to arrange -->
+        <div class="photo-zone" id="pz-999001">
+          <div class="photo-placeholder" id="pp-999001">
+            <div class="photo-placeholder-icon">📷</div>
+            <div class="photo-placeholder-text">Klepni a nahraj fotku hráče</div>
+          </div>
+          <img class="player-photo" id="pi-999001" src="" alt="" draggable="false">
+        </div>
+
+        <!-- Bottom branding -->
+        <div class="card-bottom">
+          <span class="card-brand">FPL Addicted</span>
+          <span class="card-hashtag">#MS2026 ⚽</span>
+        </div>
+      </div><!-- /panel -->
+
+    </div><!-- /card -->
+  </div><!-- /card-wrapper -->
+
+  <!-- Hidden file input -->
+  <input type="file" accept="image/*" id="file-999001" style="display:none" capture="environment">
+
+  <!-- Controls -->
+  <div class="controls">
+    <button class="btn btn-upload" onclick="document.getElementById('file-999001').click()">
+      📷 Nahrát fotku
+    </button>
+    <button class="btn btn-export" id="export-btn-999001" onclick="exportCard('999001')">
+      ⬇️ Stáhnout PNG
+    </button>
+  </div>
+
+  <!-- Caption -->
+  <div class="caption-box">
+    <div class="caption-label">Caption ke zkopírování:</div>
+    <textarea class="caption-textarea" id="caption-999001">⚽ VÝSLEDEK | MEXICO 2:1 SOUTH KOREA
+📅 12. června 2026 | Skupina A | Skupinová fáze
+
+⚽ Střelci:
+  Mexico: H. Lozano 23'
+  Mexico: R. Jimenez 67'
+  South Korea: H. Son 45'
+
+
+💎 Top fantasy hráč: ___
+
+🔮 Sleduj FPL Addicted pro tipy na WC fantasy ligu!
+
+—
+#MS2026 #WorldCup2026 #Mexico #SouthKorea #FPL #FPLAddicted</textarea>
+    <button class="btn-copy" id="copy-btn-999001" onclick="copyCaption('999001')">
+      📋 Kopírovat caption
+    </button>
+  </div>
+
+</div><!-- /match-section -->
+<div class="match-divider"></div>
+<div class="match-section">
+
+  <!-- ── Card wrapper (clips scaled card) ── -->
+  <div class="card-wrapper" id="wrapper-999002">
+    <div class="card" id="card-999002" data-match-id="999002">
+
+      <!-- WC 2026 background -->
+      <div class="bg">
+        <div class="bg-purple"></div>
+        <div class="bg-green"></div>
+        <div class="bg-lime"></div>
+      </div>
+
+      <!-- White panel -->
+      <div class="panel">
+        <div class="stripe"></div>
+
+        <!-- Top row: logos + match info -->
+        <div class="top-row">
+          <img class="wc-logo" src="assets/logos/wc2026.png" alt="FIFA WC 2026">
+          <div class="match-meta">
+            <div class="match-round">SKUPINA A · SKUPINOVÁ FÁZE · HRACÍ DEN 1</div>
+            <div class="match-title">MS 2026 · Výsledky</div>
+            <div class="match-date-label">12. června 2026</div>
+          </div>
+          <img class="fpl-logo" src="assets/logos/fpl_addicted.png" alt="FPL Addicted">
+        </div>
+
+        <!-- Score section -->
+        <div class="score-section">
+          <div class="team">
+            <img class="team-flag" src="assets/flags/CZ.png" alt="Czechia">
+            <div class="team-name">Czechia</div>
+          </div>
+          <div class="score-display">
+            <span class="score-num">0</span>
+            <span class="score-sep">:</span>
+            <span class="score-num">0</span>
+          </div>
+          <div class="team">
+            <img class="team-flag" src="assets/flags/ZA.png" alt="South Africa">
+            <div class="team-name">South Africa</div>
+          </div>
+        </div>
+
+        <!-- Scorers -->
+        <div class="scorers-section empty">
+  <div class="scorers-col"></div>
+  <div class="scorers-icon">⚽</div>
+  <div class="scorers-col scorers-right"></div>
+</div>
+
+        <!-- Photo zone: tap to upload, drag/zoom to arrange -->
+        <div class="photo-zone" id="pz-999002">
+          <div class="photo-placeholder" id="pp-999002">
+            <div class="photo-placeholder-icon">📷</div>
+            <div class="photo-placeholder-text">Klepni a nahraj fotku hráče</div>
+          </div>
+          <img class="player-photo" id="pi-999002" src="" alt="" draggable="false">
+        </div>
+
+        <!-- Bottom branding -->
+        <div class="card-bottom">
+          <span class="card-brand">FPL Addicted</span>
+          <span class="card-hashtag">#MS2026 ⚽</span>
+        </div>
+      </div><!-- /panel -->
+
+    </div><!-- /card -->
+  </div><!-- /card-wrapper -->
+
+  <!-- Hidden file input -->
+  <input type="file" accept="image/*" id="file-999002" style="display:none" capture="environment">
+
+  <!-- Controls -->
+  <div class="controls">
+    <button class="btn btn-upload" onclick="document.getElementById('file-999002').click()">
+      📷 Nahrát fotku
+    </button>
+    <button class="btn btn-export" id="export-btn-999002" onclick="exportCard('999002')">
+      ⬇️ Stáhnout PNG
+    </button>
+  </div>
+
+  <!-- Caption -->
+  <div class="caption-box">
+    <div class="caption-label">Caption ke zkopírování:</div>
+    <textarea class="caption-textarea" id="caption-999002">⚽ VÝSLEDEK | CZECHIA 0:0 SOUTH AFRICA
+📅 12. června 2026 | Skupina A | Skupinová fáze
+
+💎 Top fantasy hráč: ___
+
+🔮 Sleduj FPL Addicted pro tipy na WC fantasy ligu!
+
+—
+#MS2026 #WorldCup2026 #Czechia #SouthAfrica #FPL #FPLAddicted</textarea>
+    <button class="btn-copy" id="copy-btn-999002" onclick="copyCaption('999002')">
+      📋 Kopírovat caption
+    </button>
+  </div>
+
+</div><!-- /match-section -->
+<div class="match-divider"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

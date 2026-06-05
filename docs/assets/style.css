@@ -1,0 +1,423 @@
+/* ======================================================
+   MS 2026 — FPL Addicted výsledkové karty
+   Karta je 1080×1350px v CSS, zobrazena scaled pro screen
+   ====================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red:    #C8001A;
+  --purple: #5B2D8E;
+  --green:  #006B3C;
+  --lime:   #AACC00;
+  --navy:   #0d1b3e;
+  --border: #ebebeb;
+}
+
+body {
+  background: #111;
+  font-family: 'Barlow', sans-serif;
+  padding: 24px 0 60px;
+  min-height: 100vh;
+}
+
+/* ── Page header ─────────────────────────────────────── */
+.page-header {
+  text-align: center;
+  padding: 20px 16px 28px;
+  color: #fff;
+}
+.page-header h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.page-header .date-label {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  color: #aaa;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.no-matches {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  padding: 60px 20px;
+  letter-spacing: 0.05em;
+}
+
+/* ── Match section wrapper ───────────────────────────── */
+.match-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+/* ── Card wrapper (clips scaled card to visible area) ── */
+.card-wrapper {
+  position: relative;
+  overflow: hidden;
+  /* Width/height set by JS to match scaled card */
+}
+
+/* ── THE CARD (always 1080×1350 in CSS) ─────────────── */
+.card {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  transform-origin: top left;
+  /* transform: scale(X) set by JS */
+}
+
+/* ── WC 2026 background ──────────────────────────────── */
+.bg {
+  position: absolute;
+  inset: 0;
+  background: var(--red);
+}
+.bg-purple {
+  position: absolute;
+  top: 0; left: 0;
+  width: 420px; height: 450px;
+  background: var(--purple);
+  border-radius: 0 0 140px 0;
+}
+.bg-green {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 470px; height: 500px;
+  background: var(--green);
+  border-radius: 0 140px 0 0;
+}
+.bg-lime {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 550px; height: 550px;
+  background: var(--lime);
+  border-radius: 100px 0 0 0;
+}
+
+/* ── White panel ─────────────────────────────────────── */
+.panel {
+  position: absolute;
+  top: 52px; left: 52px; right: 52px; bottom: 52px;
+  background: #fff;
+  border-radius: 28px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Rainbow stripe ──────────────────────────────────── */
+.stripe {
+  height: 12px;
+  flex-shrink: 0;
+  background: linear-gradient(90deg,
+    #C8001A   0%  16.6%,
+    #F5A800  16.6% 33.2%,
+    #006B3C  33.2% 49.8%,
+    #003DA5  49.8% 66.4%,
+    #5B2D8E  66.4% 83.0%,
+    #AACC00  83.0% 100%
+  );
+}
+
+/* ── Top row: logos + match info ─────────────────────── */
+.top-row {
+  display: flex;
+  align-items: center;
+  padding: 14px 32px;
+  gap: 16px;
+  border-bottom: 1.5px solid var(--border);
+  flex-shrink: 0;
+  height: 100px;
+}
+.wc-logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  background: var(--navy);
+  border-radius: 12px;
+  padding: 8px 12px;
+  flex-shrink: 0;
+}
+.match-meta {
+  flex: 1;
+  text-align: center;
+}
+.match-round {
+  font-family: 'Anton', sans-serif;
+  font-size: 13px;
+  color: var(--red);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.match-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 24px;
+  color: var(--navy);
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+.match-date-label {
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  color: #999;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.fpl-logo {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ── Score section ───────────────────────────────────── */
+.score-section {
+  display: flex;
+  align-items: center;
+  padding: 20px 36px 16px;
+  border-bottom: 1.5px solid var(--border);
+  flex-shrink: 0;
+  height: 220px;
+}
+.team {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.team-flag {
+  width: 130px;
+  height: 87px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+}
+.team-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 42px;
+  color: var(--navy);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+.score-display {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 230px;
+  justify-content: center;
+  gap: 4px;
+}
+.score-num {
+  font-family: 'Anton', sans-serif;
+  font-size: 108px;
+  color: var(--navy);
+  line-height: 1;
+  min-width: 75px;
+  text-align: center;
+}
+.score-sep {
+  font-family: 'Anton', sans-serif;
+  font-size: 80px;
+  color: var(--red);
+  line-height: 1;
+  padding: 0 4px;
+  margin-bottom: 8px;
+}
+
+/* ── Scorers ─────────────────────────────────────────── */
+.scorers-section {
+  display: grid;
+  grid-template-columns: 1fr 28px 1fr;
+  gap: 8px;
+  padding: 12px 44px 10px;
+  flex-shrink: 0;
+  min-height: 0;
+  border-bottom: 1.5px solid var(--border);
+}
+.scorers-section.empty { display: none; }
+.scorers-col { display: flex; flex-direction: column; gap: 3px; }
+.scorer-item {
+  font-family: 'Barlow', sans-serif;
+  font-size: 22px;
+  color: #333;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.scorer-item .min { color: var(--red); font-weight: 700; font-size: 19px; }
+.scorers-right { text-align: right; }
+.scorers-icon {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 3px;
+}
+
+/* ── Photo zone ──────────────────────────────────────── */
+.photo-zone {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #f0f0f0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #ccc;
+  pointer-events: none;
+}
+.photo-placeholder-icon { font-size: 90px; }
+.photo-placeholder-text {
+  font-family: 'Barlow', sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 0 60px;
+}
+.player-photo {
+  position: absolute;
+  top: 0; left: 0;
+  transform-origin: center center;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  max-width: none;
+  max-height: none;
+}
+
+/* ── Card bottom bar ─────────────────────────────────── */
+.card-bottom {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  flex-shrink: 0;
+  border-top: 1.5px solid var(--border);
+}
+.card-brand {
+  font-family: 'Anton', sans-serif;
+  font-size: 22px;
+  color: var(--navy);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.card-hashtag {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* ── Controls (below card, not exported) ─────────────── */
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 560px;
+}
+.btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  letter-spacing: 0.04em;
+  flex: 1;
+  min-width: 140px;
+}
+.btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-upload { background: var(--navy); color: #fff; }
+.btn-export { background: var(--red);  color: #fff; }
+
+/* ── Caption box ─────────────────────────────────────── */
+.caption-box {
+  width: 100%;
+  max-width: 560px;
+  margin-top: 16px;
+  padding: 0 16px;
+}
+.caption-label {
+  font-family: 'Barlow', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 8px;
+}
+.caption-textarea {
+  width: 100%;
+  min-height: 160px;
+  border: 1.5px solid #333;
+  border-radius: 10px;
+  background: #1a1a1a;
+  color: #e8e8e8;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 14px 16px;
+  resize: vertical;
+  outline: none;
+}
+.caption-textarea:focus { border-color: var(--red); }
+.btn-copy {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  background: #2a2a2a;
+  color: #ccc;
+  border: 1.5px solid #444;
+  border-radius: 10px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.15s;
+}
+.btn-copy:active { background: #3a3a3a; }
+.btn-copy.copied { background: #1a4a1a; color: #aaffaa; border-color: #2a7a2a; }
+
+/* ── Match divider ───────────────────────────────────── */
+.match-divider {
+  width: 60%;
+  height: 1px;
+  background: #333;
+  margin: 16px auto 48px;
+}
