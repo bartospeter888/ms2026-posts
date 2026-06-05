@@ -224,7 +224,7 @@ def build_card_html(match: dict) -> str:
   </div><!-- /card-wrapper -->
 
   <!-- Hidden file input -->
-  <input type="file" accept="image/*" id="file-{mid}" style="display:none" capture="environment">
+  <input type="file" accept="image/*" id="file-{mid}" style="display:none">
 
   <!-- Controls -->
   <div class="controls">

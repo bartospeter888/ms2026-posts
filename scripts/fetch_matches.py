@@ -10,7 +10,7 @@ import requests
 
 API_KEY = os.environ.get("FOOTBALL_DATA_API_KEY", "")
 BASE_URL = "https://api.football-data.org/v4"
-COMPETITION = "PL"  # TEST
+COMPETITION = "WC"
 OUTPUT = os.path.join(os.path.dirname(__file__), "..", "matches.json")
 
 TOURNAMENT_START = date(2026, 6, 11)
