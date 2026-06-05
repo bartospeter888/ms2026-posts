@@ -173,14 +173,8 @@ def build_card_html(match: dict) -> str:
       <div class="panel">
         <div class="stripe"></div>
 
-        <!-- Top row: logos + match info -->
+        <!-- Top row: FPL Addicted logo only -->
         <div class="top-row">
-          <img class="wc-logo" src="assets/logos/wc2026.png" alt="FIFA WC 2026">
-          <div class="match-meta">
-            <div class="match-round">{round_lbl}</div>
-            <div class="match-title">MS 2026 · Výsledky</div>
-            <div class="match-date-label">{date_lbl}</div>
-          </div>
           <img class="fpl-logo" src="assets/logos/fpl_addicted.png" alt="FPL Addicted">
         </div>
 
@@ -213,11 +207,6 @@ def build_card_html(match: dict) -> str:
           <img class="player-photo" id="pi-{mid}" src="" alt="" draggable="false">
         </div>
 
-        <!-- Bottom branding -->
-        <div class="card-bottom">
-          <span class="card-brand">FPL Addicted</span>
-          <span class="card-hashtag">#MS2026 ⚽</span>
-        </div>
       </div><!-- /panel -->
 
     </div><!-- /card -->
