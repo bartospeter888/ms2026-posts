@@ -10,7 +10,7 @@ import requests
 
 API_KEY = os.environ.get("FOOTBALL_DATA_API_KEY", "")
 BASE_URL = "https://api.football-data.org/v4"
-COMPETITION = "WC"
+COMPETITION = "PL"  # TEST
 OUTPUT = os.path.join(os.path.dirname(__file__), "..", "matches.json")
 
 TOURNAMENT_START = date(2026, 6, 11)
@@ -97,11 +97,11 @@ def main():
     else:
         target = date.today() - timedelta(days=1)
 
-    if not (TOURNAMENT_START <= target <= TOURNAMENT_END):
+    if COMPETITION == "WC" and not (TOURNAMENT_START <= target <= TOURNAMENT_END):
         print(f"Date {target} outside tournament window — writing empty matches.json")
         result = {"date": target.isoformat(), "matches": []}
     else:
-        print(f"Fetching WC matches for {target}…")
+        print(f"Fetching {COMPETITION} matches for {target}…")
         matches = fetch_matches(target)
         print(f"  Found {len(matches)} finished match(es).")
         result = {"date": target.isoformat(), "matches": matches}
