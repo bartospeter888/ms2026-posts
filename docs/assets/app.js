@@ -59,6 +59,7 @@ function initCard(matchId) {
       img.style.top    = '50%';
       state.x = 0; state.y = 0; state.scale = 1;
       applyTransform();
+      img.style.display         = 'block';
       placeholder.style.display = 'none';
     };
   });

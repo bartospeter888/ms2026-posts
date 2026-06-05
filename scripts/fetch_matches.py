@@ -20,7 +20,8 @@ TOURNAMENT_END   = date(2026, 7, 19)
 def fetch_matches(target: date) -> list:
     url = f"{BASE_URL}/competitions/{COMPETITION}/matches"
     headers = {"X-Auth-Token": API_KEY}
-    params  = {"dateFrom": target.isoformat(), "dateTo": target.isoformat()}
+    # +1 day window catches late Pacific-time kickoffs whose utcDate rolls to next UTC day
+    params  = {"dateFrom": target.isoformat(), "dateTo": (target + timedelta(days=1)).isoformat()}
 
     resp = requests.get(url, headers=headers, params=params, timeout=20)
     resp.raise_for_status()

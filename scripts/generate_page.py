@@ -143,79 +143,53 @@ def build_card_html(match: dict) -> str:
     away_name  = esc(away["shortName"] or away["name"])
     home_flag  = flag_path(home["tla"])
     away_flag  = flag_path(away["tla"])
-    date_lbl   = esc(format_date(match.get("utcDate", "")))
-    round_lbl  = esc(stage_label(
-        match.get("stage", "GROUP_STAGE"),
-        match.get("group"),
-        match.get("matchday"),
-    ))
-
-    scorers_html = build_scorers_html(
-        match.get("scorers_home", []),
-        match.get("scorers_away", []),
-    )
-    caption = esc(build_caption(match))
+    caption    = esc(build_caption(match))
 
     return f'''<div class="match-section">
 
-  <!-- ── Card wrapper (clips scaled card) ── -->
   <div class="card-wrapper" id="wrapper-{mid}">
     <div class="card" id="card-{mid}" data-match-id="{mid}">
 
-      <!-- WC 2026 background -->
-      <div class="bg">
-        <div class="bg-purple"></div>
-        <div class="bg-green"></div>
-        <div class="bg-lime"></div>
+      <!-- Full-bleed photo background -->
+      <div class="photo-zone" id="pz-{mid}">
+        <div class="photo-placeholder" id="pp-{mid}">
+          <div class="photo-placeholder-icon">📷</div>
+          <div>Klepni pro nahrání fotky</div>
+        </div>
+        <img class="player-photo" id="pi-{mid}" draggable="false" alt="">
       </div>
 
-      <!-- White panel -->
-      <div class="panel">
-        <div class="stripe"></div>
+      <!-- Dark gradient overlay -->
+      <div class="gradient-overlay"></div>
 
-        <!-- Top row: FPL Addicted logo only -->
-        <div class="top-row">
-          <img class="fpl-logo" src="assets/logos/fpl_addicted.png" alt="FPL Addicted">
+      <!-- Top logos -->
+      <div class="top-logos">
+        <img class="logo-wc"  src="assets/logos/wc2026.png"       alt="FIFA WC 2026">
+        <img class="logo-fpl" src="assets/logos/fpl_addicted.png"  alt="FPL Addicted">
+      </div>
+
+      <!-- Score section -->
+      <div class="score-section">
+        <div class="team-block">
+          <img class="team-flag" src="{home_flag}" alt="{home_name}">
+          <div class="team-name">{home_name}</div>
         </div>
-
-        <!-- Score section -->
-        <div class="score-section">
-          <div class="team">
-            <img class="team-flag" src="{home_flag}" alt="{home_name}">
-            <div class="team-name">{home_name}</div>
-          </div>
-          <div class="score-display">
-            <span class="score-num">{score_h}</span>
-            <span class="score-sep">:</span>
-            <span class="score-num">{score_a}</span>
-          </div>
-          <div class="team">
-            <img class="team-flag" src="{away_flag}" alt="{away_name}">
-            <div class="team-name">{away_name}</div>
-          </div>
+        <div class="score-center">
+          <span class="score-num">{score_h}</span>
+          <div class="score-vline"></div>
+          <span class="score-num">{score_a}</span>
         </div>
-
-        <!-- Scorers -->
-        {scorers_html}
-
-        <!-- Photo zone: tap to upload, drag/zoom to arrange -->
-        <div class="photo-zone" id="pz-{mid}">
-          <div class="photo-placeholder" id="pp-{mid}">
-            <div class="photo-placeholder-icon">📷</div>
-            <div class="photo-placeholder-text">Klepni a nahraj fotku hráče</div>
-          </div>
-          <img class="player-photo" id="pi-{mid}" src="" alt="" draggable="false">
+        <div class="team-block">
+          <img class="team-flag" src="{away_flag}" alt="{away_name}">
+          <div class="team-name">{away_name}</div>
         </div>
-
-      </div><!-- /panel -->
+      </div>
 
     </div><!-- /card -->
   </div><!-- /card-wrapper -->
 
-  <!-- Hidden file input -->
   <input type="file" accept="image/*" id="file-{mid}" style="display:none">
 
-  <!-- Controls -->
   <div class="controls">
     <button class="btn btn-upload" onclick="document.getElementById('file-{mid}').click()">
       📷 Nahrát fotku
@@ -225,7 +199,6 @@ def build_card_html(match: dict) -> str:
     </button>
   </div>
 
-  <!-- Caption -->
   <div class="caption-box">
     <div class="caption-label">Caption ke zkopírování:</div>
     <textarea class="caption-textarea" id="caption-{mid}">{caption}</textarea>

@@ -2,8 +2,8 @@ name: MS 2026 – Daily Match Cards
 
 on:
   schedule:
-    # 06:30 UTC = 08:30 SELČ (letní čas) — celý červen a červenec
-    - cron: '30 6 * 6,7 *'
+    # 03:00 UTC = 05:00 SELČ — po skončení všech zápasů vč. nejpozd. výkopů v Pacifiku
+    - cron: '0 3 * 6,7 *'
   workflow_dispatch:    # manuální spuštění pro testování
     inputs:
       date_override:
