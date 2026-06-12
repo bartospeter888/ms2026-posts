@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Fetch WC 2026 match results for yesterday from football-data.org and save to matches.json."""
+"""Fetch WC 2026 match results for yesterday from football-data.org and save to matches.json.
+Goal scorers are enriched via TheSportsDB v1 (free key '123').
+"""
 
 import json
 import os
@@ -7,6 +9,9 @@ import sys
 from datetime import date, timedelta
 
 import requests
+
+sys.path.insert(0, os.path.dirname(__file__))
+from scorer_lookup import scorers_by_teams
 
 API_KEY = os.environ.get("FOOTBALL_DATA_API_KEY", "")
 BASE_URL = "https://api.football-data.org/v4"
@@ -36,22 +41,13 @@ def fetch_matches(target: date) -> list:
         away  = m.get("awayTeam", {})
         score = m.get("score", {}).get("fullTime", {})
 
-        # Goals are only on higher tiers — graceful fallback to empty lists
-        goals         = m.get("goals") or []
-        scorers_home  = []
-        scorers_away  = []
-
-        for g in goals:
-            scorer_name = (g.get("scorer") or {}).get("name", "")
-            if not scorer_name:
-                continue
-            minute = g.get("minute")
-            label  = f"{scorer_name} {minute}'" if minute else scorer_name
-            team_id = (g.get("team") or {}).get("id")
-            if team_id == home.get("id"):
-                scorers_home.append(label)
-            else:
-                scorers_away.append(label)
+        # Scorers from TheSportsDB (football-data.org free tier has no goals)
+        home_name_str = home.get("name", "")
+        away_name_str = away.get("name", "")
+        scorers_home, scorers_away = scorers_by_teams(
+            home_name_str, away_name_str, target.isoformat()
+        )
+        print(f"    Scorers: {scorers_home} | {scorers_away}")
 
         matches.append({
             "id":           m.get("id"),
