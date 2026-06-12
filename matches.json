@@ -23,6 +23,34 @@
         "home": 2,
         "away": 0
       },
+      "scorers_home": [
+        "9' Julián Quiñones",
+        "67' Jiménez"
+      ],
+      "scorers_away": []
+    },
+    {
+      "id": 537328,
+      "utcDate": "2026-06-12T02:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A",
+      "home": {
+        "name": "South Korea",
+        "shortName": "Korea Republic",
+        "tla": "KOR",
+        "crest": "https://crests.football-data.org/772.png"
+      },
+      "away": {
+        "name": "Czechia",
+        "shortName": "Czechia",
+        "tla": "CZE",
+        "crest": "https://crests.football-data.org/798.svg"
+      },
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "scorers_home": [],
       "scorers_away": []
     }
