@@ -1,4 +1,30 @@
 {
-  "date": "2026-06-10",
-  "matches": []
+  "date": "2026-06-11",
+  "matches": [
+    {
+      "id": 537327,
+      "utcDate": "2026-06-11T19:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A",
+      "home": {
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX",
+        "crest": "https://crests.football-data.org/769.svg"
+      },
+      "away": {
+        "name": "South Africa",
+        "shortName": "South Africa",
+        "tla": "RSA",
+        "crest": "https://crests.football-data.org/9396.svg"
+      },
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "scorers_home": [],
+      "scorers_away": []
+    }
+  ]
 }
