@@ -2,12 +2,16 @@ name: MS 2026 – Daily Match Cards
 
 on:
   schedule:
-    # 03:00 UTC = 05:00 SELČ — po skončení všech zápasů vč. nejpozd. výkopů v Pacifiku
-    - cron: '0 3 * 6,7 *'
+    # Polling: každých 10 min, 17:00-06:59 UTC (19:00-08:00 SELČ) — zachytí
+    # zápas hned po dohrání, ať skončí večer nebo přes půlnoc.
+    - cron: '*/10 17-23,0-6 * 6,7 *'
+    # Úklid: jednou denně v 13:00 UTC (15:00 SELČ) — vyčistí karty
+    # předchozího herního dne, ať jsou na webu vidět dost dlouho na repost.
+    - cron: '0 13 * 6,7 *'
   workflow_dispatch:    # manuální spuštění pro testování
     inputs:
       date_override:
-        description: 'Přepsat datum (YYYY-MM-DD) — prázdné = včerejší datum'
+        description: 'Přepsat datum (YYYY-MM-DD) — prázdné = automatická detekce herního dne'
         required: false
         default: ''
 
@@ -50,11 +54,11 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/ matches.json
+          git add docs/ matches.json processed_ids.json
           if git diff --cached --quiet; then
-            echo "Nothing to commit — no matches or no changes."
+            echo "Nothing to commit — no new finished matches."
           else
-            DATE=$(date -u '+%Y-%m-%d')
-            git commit -m "chore: match cards for ${DATE} [skip ci]"
+            TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
+            git commit -m "chore: match card update ${TIMESTAMP} [skip ci]"
             git push
           fi
