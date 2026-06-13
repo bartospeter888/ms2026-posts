@@ -23,8 +23,12 @@
         "home": 1,
         "away": 1
       },
-      "scorers_home": [],
-      "scorers_away": []
+      "scorers_home": [
+        "78' Cyle Larin"
+      ],
+      "scorers_away": [
+        "21' Jovo Lukić"
+      ]
     },
     {
       "id": 537345,
@@ -48,8 +52,15 @@
         "home": 4,
         "away": 1
       },
-      "scorers_home": [],
-      "scorers_away": []
+      "scorers_home": [
+        "7' Damián Bobadilla (vlastní gól)",
+        "31' Folarin Balogun",
+        "45' Folarin Balogun",
+        "90+8' Gio Reyna"
+      ],
+      "scorers_away": [
+        "73' Mauricio"
+      ]
     }
   ]
 }

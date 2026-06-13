@@ -16,6 +16,7 @@ merged in and sorted by minute.
 import json
 import os
 import re
+from datetime import date, timedelta
 
 import requests
 
@@ -38,12 +39,19 @@ def _sort_by_minute(scorers: list[str]) -> list[str]:
     return sorted(scorers, key=minute)
 
 
+# football-data.org vs TheSportsDB naming differences that don't normalize away
+_NAME_ALIASES = {
+    "united states": "usa",
+}
+
+
 def _norm(name: str) -> str:
-    s = name.lower()
-    for tok in ("fc", "afc", "sc", "cf", "ac", "fk",
+    s = name.lower().replace("-", " ").replace("&", " and ")
+    for tok in ("fc", "afc", "sc", "cf", "ac", "fk", " and ",
                 "national football team", "national team"):
-        s = s.replace(tok, "")
-    return " ".join(s.split())
+        s = s.replace(tok, " ")
+    s = " ".join(s.split())
+    return _NAME_ALIASES.get(s, s)
 
 
 def _match(a: str, b: str) -> bool:
@@ -69,6 +77,9 @@ def scorers_by_id(event_id: str) -> tuple[list[str], list[str]]:
                 continue
             minute  = (item.get("intTime") or "").strip()
             is_home = (item.get("strHome") or "").strip().lower() == "yes"
+            is_og   = (item.get("strTimelineDetail") or "").strip().lower() == "own goal"
+            if is_og:
+                player += " (vlastní gól)"
             label   = f"{minute}' {player}" if minute else player
 
             if is_home:
@@ -86,18 +97,33 @@ def scorers_by_id(event_id: str) -> tuple[list[str], list[str]]:
     return _sort_by_minute(sh), _sort_by_minute(sa)
 
 
+# TheSportsDB league id for "FIFA World Cup". eventsday.php?s=Soccer often
+# omits World Cup fixtures entirely, so filter by league instead.
+_WC_LEAGUE_ID = "4429"
+
+
 def _find_event_id(home: str, away: str, date_str: str) -> str | None:
-    """Search TSDB for a soccer event by team names on a given UTC date."""
+    """Search TSDB for a World Cup event by team names on a given UTC date.
+
+    Late-night kickoffs (e.g. US matches starting ~01:00 UTC) get a
+    TSDB dateEvent one day after our "game day" date, so check both.
+    """
     try:
-        r = requests.get(f"{_BASE}/eventsday.php",
-                         params={"d": date_str, "s": "Soccer"}, timeout=10)
-        r.raise_for_status()
-        for ev in (r.json().get("events") or []):
-            if (_match(home, ev.get("strHomeTeam", "")) and
-                    _match(away, ev.get("strAwayTeam", ""))):
-                return ev.get("idEvent")
-    except Exception:
-        pass
+        day = date.fromisoformat(date_str)
+    except ValueError:
+        return None
+
+    for d in (day, day + timedelta(days=1)):
+        try:
+            r = requests.get(f"{_BASE}/eventsday.php",
+                             params={"d": d.isoformat(), "l": _WC_LEAGUE_ID}, timeout=10)
+            r.raise_for_status()
+            for ev in (r.json().get("events") or []):
+                if (_match(home, ev.get("strHomeTeam", "")) and
+                        _match(away, ev.get("strAwayTeam", ""))):
+                    return ev.get("idEvent")
+        except Exception:
+            pass
     return None
 
 
