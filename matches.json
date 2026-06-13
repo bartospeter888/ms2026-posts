@@ -25,6 +25,31 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537345,
+      "utcDate": "2026-06-13T01:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_D",
+      "home": {
+        "name": "United States",
+        "shortName": "USA",
+        "tla": "USA",
+        "crest": "https://crests.football-data.org/usa.svg"
+      },
+      "away": {
+        "name": "Paraguay",
+        "shortName": "Paraguay",
+        "tla": "PAR",
+        "crest": "https://crests.football-data.org/761.svg"
+      },
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
