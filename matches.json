@@ -1,65 +1,31 @@
 {
-  "date": "2026-06-12",
+  "date": "2026-06-13",
   "matches": [
     {
-      "id": 537333,
-      "utcDate": "2026-06-12T19:00:00Z",
+      "id": 537334,
+      "utcDate": "2026-06-13T19:00:00Z",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
       "home": {
-        "name": "Canada",
-        "shortName": "Canada",
-        "tla": "CAN",
-        "crest": "https://crests.football-data.org/canada.svg"
+        "name": "Qatar",
+        "shortName": "Qatar",
+        "tla": "QAT",
+        "crest": "https://crests.football-data.org/8030.svg"
       },
       "away": {
-        "name": "Bosnia-Herzegovina",
-        "shortName": "Bosnia-H.",
-        "tla": "BIH",
-        "crest": "https://crests.football-data.org/bosnia.svg"
+        "name": "Switzerland",
+        "shortName": "Switzerland",
+        "tla": "SUI",
+        "crest": "https://crests.football-data.org/788.svg"
       },
       "score": {
         "home": 1,
         "away": 1
       },
-      "scorers_home": [
-        "78' Cyle Larin"
-      ],
+      "scorers_home": [],
       "scorers_away": [
-        "21' Jovo Lukić"
-      ]
-    },
-    {
-      "id": 537345,
-      "utcDate": "2026-06-13T01:00:00Z",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_D",
-      "home": {
-        "name": "United States",
-        "shortName": "USA",
-        "tla": "USA",
-        "crest": "https://crests.football-data.org/usa.svg"
-      },
-      "away": {
-        "name": "Paraguay",
-        "shortName": "Paraguay",
-        "tla": "PAR",
-        "crest": "https://crests.football-data.org/761.svg"
-      },
-      "score": {
-        "home": 4,
-        "away": 1
-      },
-      "scorers_home": [
-        "7' Damián Bobadilla (vlastní gól)",
-        "31' Folarin Balogun",
-        "45' Folarin Balogun",
-        "90+8' Gio Reyna"
-      ],
-      "scorers_away": [
-        "73' Mauricio"
+        "17' Breel Embolo"
       ]
     }
   ]
