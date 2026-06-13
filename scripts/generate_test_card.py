@@ -140,10 +140,10 @@ body {{
 /* ── Score section — blíž ke spodku ─────────────── */
 .score-section {{
   position: absolute;
-  bottom: 210px;
+  bottom: 150px;
   left: 0; right: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 56px;
   z-index: 10;
   pointer-events: none;
@@ -153,7 +153,7 @@ body {{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 12px;
 }}
 .team-flag {{
@@ -174,6 +174,8 @@ body {{
   letter-spacing: 0.06em;
   text-align: center;
   text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  -webkit-text-stroke: 5px #5B2D8E;
+  paint-order: stroke fill;
   width: 100%;
 }}
 .score-center {{
@@ -181,6 +183,7 @@ body {{
   align-items: center;
   gap: 20px;
   flex-shrink: 0;
+  padding-top: 8px;
 }}
 .score-num {{
   font-family: 'Anton', sans-serif;
@@ -190,12 +193,24 @@ body {{
   min-width: 120px;
   text-align: center;
   text-shadow:
-    0.6px  0.6px 0 #fff,
-   -0.6px  0.6px 0 #fff,
-    0.6px -0.6px 0 #fff,
-   -0.6px -0.6px 0 #fff,
-    0 4px 28px rgba(0,0,0,0.5);
-  -webkit-text-stroke: 5px #fff;
+     1.5px  0    0 #fff,
+    -1.5px  0    0 #fff,
+     0      1.5px 0 #fff,
+     0     -1.5px 0 #fff,
+     1.5px  1.5px 0 #fff,
+    -1.5px  1.5px 0 #fff,
+     1.5px -1.5px 0 #fff,
+    -1.5px -1.5px 0 #fff,
+     10px  0    0 #5B2D8E,
+    -10px  0    0 #5B2D8E,
+     0     10px 0 #5B2D8E,
+     0    -10px 0 #5B2D8E,
+     10px  10px 0 #5B2D8E,
+    -10px  10px 0 #5B2D8E,
+     10px -10px 0 #5B2D8E,
+    -10px -10px 0 #5B2D8E,
+     0 4px 28px rgba(0,0,0,0.5);
+  -webkit-text-stroke: 9px #fff;
   paint-order: stroke fill;
 }}
 .score-vline {{
@@ -206,6 +221,26 @@ body {{
   flex-shrink: 0;
 }}
 
+
+/* ── Scorers — inside .team-block ────────────────── */
+.scorer-list {{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 4px;
+}}
+.scorer-item {{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: inherit;
+  color: rgba(255,255,255,0.88);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.9);
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-align: center;
+}}
 
 /* ── Controls (outside card, not exported) ───────── */
 .controls {{
@@ -265,6 +300,9 @@ body {{
       <div class="team-block">
         <img class="team-flag" src="{br_flag}" alt="Brazil">
         <div class="team-name">Brazil</div>
+        <div class="scorer-list" style="font-size:26px">
+          <div class="scorer-item">Vinicius Jr. 34', 67'</div>
+        </div>
       </div>
       <div class="score-center">
         <span class="score-num">2</span>
@@ -276,7 +314,6 @@ body {{
         <div class="team-name">Morocco</div>
       </div>
     </div>
-
 
   </div><!-- /card -->
 </div><!-- /card-wrapper -->

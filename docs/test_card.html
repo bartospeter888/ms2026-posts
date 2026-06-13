@@ -116,10 +116,10 @@ body {
 /* ── Score section — blíž ke spodku ─────────────── */
 .score-section {
   position: absolute;
-  bottom: 210px;
+  bottom: 150px;
   left: 0; right: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 56px;
   z-index: 10;
   pointer-events: none;
@@ -129,7 +129,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 12px;
 }
 .team-flag {
@@ -150,6 +150,8 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
   text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  -webkit-text-stroke: 5px #5B2D8E;
+  paint-order: stroke fill;
   width: 100%;
 }
 .score-center {
@@ -157,6 +159,7 @@ body {
   align-items: center;
   gap: 20px;
   flex-shrink: 0;
+  padding-top: 8px;
 }
 .score-num {
   font-family: 'Anton', sans-serif;
@@ -166,12 +169,24 @@ body {
   min-width: 120px;
   text-align: center;
   text-shadow:
-    0.6px  0.6px 0 #fff,
-   -0.6px  0.6px 0 #fff,
-    0.6px -0.6px 0 #fff,
-   -0.6px -0.6px 0 #fff,
-    0 4px 28px rgba(0,0,0,0.5);
-  -webkit-text-stroke: 5px #fff;
+     1.5px  0    0 #fff,
+    -1.5px  0    0 #fff,
+     0      1.5px 0 #fff,
+     0     -1.5px 0 #fff,
+     1.5px  1.5px 0 #fff,
+    -1.5px  1.5px 0 #fff,
+     1.5px -1.5px 0 #fff,
+    -1.5px -1.5px 0 #fff,
+     10px  0    0 #5B2D8E,
+    -10px  0    0 #5B2D8E,
+     0     10px 0 #5B2D8E,
+     0    -10px 0 #5B2D8E,
+     10px  10px 0 #5B2D8E,
+    -10px  10px 0 #5B2D8E,
+     10px -10px 0 #5B2D8E,
+    -10px -10px 0 #5B2D8E,
+     0 4px 28px rgba(0,0,0,0.5);
+  -webkit-text-stroke: 9px #fff;
   paint-order: stroke fill;
 }
 .score-vline {
@@ -182,6 +197,26 @@ body {
   flex-shrink: 0;
 }
 
+
+/* ── Scorers — inside .team-block ────────────────── */
+.scorer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 4px;
+}
+.scorer-item {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: inherit;
+  color: rgba(255,255,255,0.88);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.9);
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-align: center;
+}
 
 /* ── Controls (outside card, not exported) ───────── */
 .controls {
@@ -241,6 +276,9 @@ body {
       <div class="team-block">
         <img class="team-flag" src="data:image/png;base64,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" alt="Brazil">
         <div class="team-name">Brazil</div>
+        <div class="scorer-list" style="font-size:26px">
+          <div class="scorer-item">Vinicius Jr. 34', 67'</div>
+        </div>
       </div>
       <div class="score-center">
         <span class="score-num">2</span>
@@ -252,7 +290,6 @@ body {
         <div class="team-name">Morocco</div>
       </div>
     </div>
-
 
   </div><!-- /card -->
 </div><!-- /card-wrapper -->

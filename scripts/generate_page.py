@@ -4,6 +4,7 @@ generate_page.py — Čte matches.json a generuje docs/index.html se všemi matc
 Vlajky hledá nejdřív v docs/assets/flags/{ISO_UPPER}.png, fallback na flagcdn.com CDN.
 """
 
+import base64
 import json
 import os
 import sys
@@ -12,13 +13,26 @@ from datetime import datetime, timezone
 ROOT      = os.path.join(os.path.dirname(__file__), "..")
 MATCHES   = os.path.join(ROOT, "matches.json")
 FLAGS_DIR = os.path.join(ROOT, "docs", "assets", "flags")
+LOGOS_DIR = os.path.join(ROOT, "docs", "assets", "logos")
 OUTPUT    = os.path.join(ROOT, "docs", "index.html")
-
-# Relative paths from docs/ for assets served by GitHub Pages
-ASSET_BASE = "assets"
 
 sys.path.insert(0, os.path.dirname(__file__))
 from flag_map import tla_to_iso
+
+
+def _b64(path: str) -> str:
+    """Read a local image file and return a base64 data URL."""
+    ext  = path.rsplit(".", 1)[-1].lower()
+    mime = {"png": "image/png", "jpg": "image/jpeg",
+            "jpeg": "image/jpeg", "webp": "image/webp"}.get(ext, "image/png")
+    with open(path, "rb") as fh:
+        data = base64.b64encode(fh.read()).decode()
+    return f"data:{mime};base64,{data}"
+
+
+# Embed logos once at module load — avoids CORS issues during PNG export
+_WC_LOGO  = _b64(os.path.join(LOGOS_DIR, "wc2026.png"))
+_FPL_LOGO = _b64(os.path.join(LOGOS_DIR, "fpl_addicted.png"))
 
 # ── Stage labels ─────────────────────────────────────────────────────────────
 STAGE_LABELS = {
@@ -32,15 +46,31 @@ STAGE_LABELS = {
 }
 
 
-def flag_path(tla: str) -> str:
-    """Return relative path from docs/ for the flag image."""
-    iso = tla_to_iso(tla)
+def flag_src(team: dict) -> str:
+    """Return a base64 data URL (or CDN URL) for a team flag/crest.
+    Priority: direct flagUrl (already fetched) → local file as b64 → CDN URL.
+    """
+    # Direct URL provided (e.g. TSDB badge) — fetch and inline it
+    direct = team.get("flagUrl") or ""
+    if direct and not direct.startswith("data:"):
+        try:
+            import urllib.request
+            with urllib.request.urlopen(direct, timeout=8) as r:
+                raw  = r.read()
+                mime = r.headers.get_content_type() or "image/png"
+            return f"data:{mime};base64,{base64.b64encode(raw).decode()}"
+        except Exception:
+            return direct  # fall back to URL if fetch fails
+
+    if direct:  # already a data URL
+        return direct
+
+    iso = tla_to_iso(team.get("tla", ""))
     if not iso:
         return ""
     local = os.path.join(FLAGS_DIR, f"{iso.upper()}.png")
     if os.path.exists(local):
-        return f"{ASSET_BASE}/flags/{iso.upper()}.png"
-    # CDN fallback
+        return _b64(local)
     return f"https://flagcdn.com/w320/{iso}.png"
 
 
@@ -130,6 +160,38 @@ def esc(s) -> str:
             .replace('"', "&quot;"))
 
 
+def _merge_goals(raw: list) -> list:
+    """['2\' X', '12\' X', '45\' Y'] → ['X 2\', 12\'', '45\' Y']"""
+    from collections import OrderedDict
+    order: OrderedDict[str, list[str]] = OrderedDict()
+    for item in raw:
+        if "' " in item:
+            minute, name = item.split("' ", 1)
+        else:
+            minute, name = "", item
+        order.setdefault(name, []).append(minute)
+    result = []
+    for name, mins in order.items():
+        mins = [m for m in mins if m]
+        if len(mins) == 1:
+            result.append(f"{name} {mins[0]}'")
+        elif len(mins) > 1:
+            result.append(f"{name} " + ", ".join(f"{m}'" for m in mins))
+        else:
+            result.append(name)
+    return result
+
+
+def _scorer_list_html(scorers: list, all_max_rows: int) -> str:
+    """Build scorer-list HTML for one team. Font scales with total row count."""
+    if not scorers:
+        return ""
+    font_size = 26 if all_max_rows <= 3 else 22 if all_max_rows <= 5 else 18
+    items = "".join(f'<div class="scorer-item">{esc(s)}</div>'
+                    for s in _merge_goals(scorers))
+    return f'<div class="scorer-list" style="font-size:{font_size}px">{items}</div>'
+
+
 def build_card_html(match: dict) -> str:
     mid       = str(match["id"])
     home      = match["home"]
@@ -141,8 +203,15 @@ def build_card_html(match: dict) -> str:
 
     home_name  = esc(home["shortName"] or home["name"])
     away_name  = esc(away["shortName"] or away["name"])
-    home_flag  = flag_path(home["tla"])
-    away_flag  = flag_path(away["tla"])
+    home_flag  = flag_src(home)
+    away_flag  = flag_src(away)
+
+    raw_sh = match.get("scorers_home", [])
+    raw_sa = match.get("scorers_away", [])
+    max_rows = max(len(_merge_goals(raw_sh)), len(_merge_goals(raw_sa)))
+    home_scorers = _scorer_list_html(raw_sh, max_rows)
+    away_scorers = _scorer_list_html(raw_sa, max_rows)
+
     caption    = esc(build_caption(match))
 
     return f'''<div class="match-section">
@@ -164,8 +233,8 @@ def build_card_html(match: dict) -> str:
 
       <!-- Top logos -->
       <div class="top-logos">
-        <img class="logo-wc"  src="assets/logos/wc2026.png"       alt="FIFA WC 2026">
-        <img class="logo-fpl" src="assets/logos/fpl_addicted.png"  alt="FPL Addicted">
+        <img class="logo-wc"  src="{_WC_LOGO}"  alt="FIFA WC 2026">
+        <img class="logo-fpl" src="{_FPL_LOGO}" alt="FPL Addicted">
       </div>
 
       <!-- Score section -->
@@ -173,6 +242,7 @@ def build_card_html(match: dict) -> str:
         <div class="team-block">
           <img class="team-flag" src="{home_flag}" alt="{home_name}">
           <div class="team-name">{home_name}</div>
+          {home_scorers}
         </div>
         <div class="score-center">
           <span class="score-num">{score_h}</span>
@@ -182,6 +252,7 @@ def build_card_html(match: dict) -> str:
         <div class="team-block">
           <img class="team-flag" src="{away_flag}" alt="{away_name}">
           <div class="team-name">{away_name}</div>
+          {away_scorers}
         </div>
       </div>
 

@@ -153,21 +153,47 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// ── Inline all <img> as base64 before export (fixes CORS issues) ─────────────
+async function inlineImages(root) {
+  const imgs  = Array.from(root.querySelectorAll('img[src]'));
+  const saved = imgs.map(img => img.src);
+  await Promise.all(imgs.map(async img => {
+    const src = img.src;
+    if (!src || src.startsWith('data:') || src.startsWith('blob:')) return;
+    try {
+      const res  = await fetch(src);
+      const blob = await res.blob();
+      img.src    = await new Promise((ok, fail) => {
+        const r = new FileReader();
+        r.onload  = () => ok(r.result);
+        r.onerror = fail;
+        r.readAsDataURL(blob);
+      });
+    } catch { /* leave src as-is if fetch fails */ }
+  }));
+  return () => imgs.forEach((img, i) => { img.src = saved[i]; });
+}
+
 // ── PNG export ────────────────────────────────────────────────────────────────
 async function exportCard(matchId) {
   const card = document.getElementById(`card-${matchId}`);
   const btn  = document.getElementById(`export-btn-${matchId}`);
   if (!card || !btn) return;
 
-  // Temporarily remove the display transform so dom-to-image captures at 1080×1350
-  const savedTransform = card.style.transform;
-  card.style.transform = 'none';
-
   btn.disabled    = true;
   btn.textContent = '⏳ Exportuji…';
 
+  // Remove display transform + inline external images before capture
+  const savedTransform = card.style.transform;
+  card.style.transform = 'none';
+  const restore = await inlineImages(card);
+
   try {
-    const dataUrl = await domtoimage.toPng(card, { width: 1080, height: 1350 });
+    // imagePlaceholder: transparent 1px — prevents reject on any remaining CORS failures
+    const dataUrl = await domtoimage.toPng(card, {
+      width: 1080, height: 1350,
+      imagePlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQI12NgAAIABQAABjE+ibYAAAAASUVORK5CYII=',
+    });
     const a = document.createElement('a');
     a.href     = dataUrl;
     a.download = `ms2026_${matchId}.png`;
@@ -193,6 +219,7 @@ async function exportCard(matchId) {
       console.error(err2);
     }
   } finally {
+    restore();
     card.style.transform = savedTransform;
     btn.disabled    = false;
     btn.textContent = '⬇️ Stáhnout PNG';
