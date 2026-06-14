@@ -177,10 +177,35 @@ async function inlineImages(root) {
   return () => imgs.forEach((img, i) => { img.src = saved[i]; });
 }
 
+// ── Flatten the photo (with its drag/zoom transform) into a plain, untransformed
+// <img> covering the photo zone. html2canvas/dom-to-image render a CSS
+// transform with calc() on an oversized <img> inconsistently across mobile
+// browsers (works in Safari, blank in Chrome) — drawing it onto a canvas
+// first with getBoundingClientRect()-derived geometry sidesteps that entirely.
+function flattenPhoto(zone, img) {
+  if (!img.src || img.style.display === 'none') return null;
+  const zoneRect = zone.getBoundingClientRect();
+  const imgRect  = img.getBoundingClientRect();
+  const canvas = document.createElement('canvas');
+  canvas.width  = Math.round(zoneRect.width);
+  canvas.height = Math.round(zoneRect.height);
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(
+    img,
+    imgRect.left - zoneRect.left,
+    imgRect.top  - zoneRect.top,
+    imgRect.width,
+    imgRect.height
+  );
+  return canvas.toDataURL('image/png');
+}
+
 // ── PNG export ────────────────────────────────────────────────────────────────
 async function exportCard(matchId) {
   const card = document.getElementById(`card-${matchId}`);
   const btn  = document.getElementById(`export-btn-${matchId}`);
+  const zone = document.getElementById(`pz-${matchId}`);
+  const img  = document.getElementById(`pi-${matchId}`);
   if (!card || !btn) return;
 
   btn.disabled    = true;
@@ -190,6 +215,15 @@ async function exportCard(matchId) {
   const savedTransform = card.style.transform;
   card.style.transform = 'none';
   const restore = await inlineImages(card);
+
+  // Flatten the photo into a plain full-cover <img> with no transform
+  const savedImgStyle = img ? img.getAttribute('style') : null;
+  const savedImgSrc   = img ? img.src : null;
+  const flat = (zone && img) ? flattenPhoto(zone, img) : null;
+  if (flat) {
+    img.src = flat;
+    img.style.cssText = 'position:absolute; inset:0; width:100%; height:100%; transform:none;';
+  }
 
   try {
     // html2canvas draws each element via canvas APIs directly, which handles
@@ -231,6 +265,10 @@ async function exportCard(matchId) {
     }
   } finally {
     restore();
+    if (flat) {
+      img.src = savedImgSrc;
+      img.setAttribute('style', savedImgStyle);
+    }
     card.style.transform = savedTransform;
     btn.disabled    = false;
     btn.textContent = '⬇️ Stáhnout PNG';
