@@ -27,6 +27,35 @@
       "scorers_away": [
         "17' Breel Embolo"
       ]
+    },
+    {
+      "id": 537339,
+      "utcDate": "2026-06-13T22:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_C",
+      "home": {
+        "name": "Brazil",
+        "shortName": "Brazil",
+        "tla": "BRA",
+        "crest": "https://crests.football-data.org/764.svg"
+      },
+      "away": {
+        "name": "Morocco",
+        "shortName": "Morocco",
+        "tla": "MAR",
+        "crest": "https://crests.football-data.org/morocco.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers_home": [
+        "32' Vinícius Júnior"
+      ],
+      "scorers_away": [
+        "21' Ismael Saibari"
+      ]
     }
   ]
 }
