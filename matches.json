@@ -1,118 +1,36 @@
 {
-  "date": "2026-06-13",
+  "date": "2026-06-14",
   "matches": [
     {
-      "id": 537334,
-      "utcDate": "2026-06-13T19:00:00Z",
+      "id": 537351,
+      "utcDate": "2026-06-14T17:00:00Z",
       "matchday": 1,
       "stage": "GROUP_STAGE",
-      "group": "GROUP_B",
+      "group": "GROUP_E",
       "home": {
-        "name": "Qatar",
-        "shortName": "Qatar",
-        "tla": "QAT",
-        "crest": "https://crests.football-data.org/8030.svg"
+        "name": "Germany",
+        "shortName": "Germany",
+        "tla": "GER",
+        "crest": "https://crests.football-data.org/759.svg"
       },
       "away": {
-        "name": "Switzerland",
-        "shortName": "Switzerland",
-        "tla": "SUI",
-        "crest": "https://crests.football-data.org/788.svg"
+        "name": "Curaçao",
+        "shortName": "Curaçao",
+        "tla": "CUW",
+        "crest": "https://crests.football-data.org/curacao.svg"
       },
       "score": {
-        "home": 1,
+        "home": 7,
         "away": 1
       },
       "scorers_home": [
-        "90+5' Boualem Khoukhi"
+        "6' Felix Nmecha",
+        "38' Nico Schlotterbeck",
+        "45' Kai Havertz"
       ],
       "scorers_away": [
-        "17' Breel Embolo"
+        "21' Livano Comenencia"
       ]
-    },
-    {
-      "id": 537339,
-      "utcDate": "2026-06-13T22:00:00Z",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_C",
-      "home": {
-        "name": "Brazil",
-        "shortName": "Brazil",
-        "tla": "BRA",
-        "crest": "https://crests.football-data.org/764.svg"
-      },
-      "away": {
-        "name": "Morocco",
-        "shortName": "Morocco",
-        "tla": "MAR",
-        "crest": "https://crests.football-data.org/morocco.svg"
-      },
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "scorers_home": [
-        "32' Vinícius Júnior"
-      ],
-      "scorers_away": [
-        "21' Ismael Saibari"
-      ]
-    },
-    {
-      "id": 537340,
-      "utcDate": "2026-06-14T01:00:00Z",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_C",
-      "home": {
-        "name": "Haiti",
-        "shortName": "Haiti",
-        "tla": "HAI",
-        "crest": "https://crests.football-data.org/haiti.svg"
-      },
-      "away": {
-        "name": "Scotland",
-        "shortName": "Scotland",
-        "tla": "SCO",
-        "crest": "https://crests.football-data.org/814.svg"
-      },
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "scorers_home": [],
-      "scorers_away": [
-        "28' John McGinn"
-      ]
-    },
-    {
-      "id": 537346,
-      "utcDate": "2026-06-14T04:00:00Z",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_D",
-      "home": {
-        "name": "Australia",
-        "shortName": "Australia",
-        "tla": "AUS",
-        "crest": "https://crests.football-data.org/779.svg"
-      },
-      "away": {
-        "name": "Turkey",
-        "shortName": "Turkey",
-        "tla": "TUR",
-        "crest": "https://crests.football-data.org/803.svg"
-      },
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "scorers_home": [
-        "27' Nestory Irankunda",
-        "75' Connor Metcalfe"
-      ],
-      "scorers_away": []
     }
   ]
 }
