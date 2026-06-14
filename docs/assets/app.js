@@ -44,24 +44,27 @@ function initCard(matchId) {
   input.addEventListener('change', e => {
     const file = e.target.files[0];
     if (!file) return;
-    const url = URL.createObjectURL(file);
-    img.src = url;
-    img.onload = () => {
-      // Center the image and fill the photo zone (cover fit)
-      const zoneW = zone.clientWidth;   // in CSS card-px (1080px scale)
-      const zoneH = zone.clientHeight;
-      const natW  = img.naturalWidth;
-      const natH  = img.naturalHeight;
-      const fillScale = Math.max(zoneW / natW, zoneH / natH);
-      img.style.width  = `${natW * fillScale}px`;
-      img.style.height = `${natH * fillScale}px`;
-      img.style.left   = '50%';
-      img.style.top    = '50%';
-      state.x = 0; state.y = 0; state.scale = 1;
-      applyTransform();
-      img.style.display         = 'block';
-      placeholder.style.display = 'none';
+    const reader = new FileReader();
+    reader.onload = () => {
+      img.src = reader.result;
+      img.onload = () => {
+        // Center the image and fill the photo zone (cover fit)
+        const zoneW = zone.clientWidth;   // in CSS card-px (1080px scale)
+        const zoneH = zone.clientHeight;
+        const natW  = img.naturalWidth;
+        const natH  = img.naturalHeight;
+        const fillScale = Math.max(zoneW / natW, zoneH / natH);
+        img.style.width  = `${natW * fillScale}px`;
+        img.style.height = `${natH * fillScale}px`;
+        img.style.left   = '50%';
+        img.style.top    = '50%';
+        state.x = 0; state.y = 0; state.scale = 1;
+        applyTransform();
+        img.style.display         = 'block';
+        placeholder.style.display = 'none';
+      };
     };
+    reader.readAsDataURL(file);
   });
 
   // Tap on zone / placeholder → open file picker
