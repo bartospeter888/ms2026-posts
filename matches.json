@@ -56,6 +56,33 @@
       "scorers_away": [
         "21' Ismael Saibari"
       ]
+    },
+    {
+      "id": 537340,
+      "utcDate": "2026-06-14T01:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_C",
+      "home": {
+        "name": "Haiti",
+        "shortName": "Haiti",
+        "tla": "HAI",
+        "crest": "https://crests.football-data.org/haiti.svg"
+      },
+      "away": {
+        "name": "Scotland",
+        "shortName": "Scotland",
+        "tla": "SCO",
+        "crest": "https://crests.football-data.org/814.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": [
+        "28' John McGinn"
+      ]
     }
   ]
 }
