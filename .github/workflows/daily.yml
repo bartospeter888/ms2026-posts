@@ -2,9 +2,9 @@ name: MS 2026 – Daily Match Cards
 
 on:
   schedule:
-    # Polling: každých 10 min, 17:00-06:59 UTC (19:00-08:00 SELČ) — zachytí
-    # zápas hned po dohrání, ať skončí večer nebo přes půlnoc.
-    - cron: '*/10 17-23,0-6 * 6,7 *'
+    # Polling: každých 10 min, 11:00-08:59 UTC (13:00-10:59 SELČ) — zachytí
+    # zápas hned po dohrání, ať skončí odpoledne, večer nebo přes půlnoc.
+    - cron: '*/10 11-23,0-8 * 6,7 *'
     # Úklid: jednou denně v 13:00 UTC (15:00 SELČ) — vyčistí karty
     # předchozího herního dne, ať jsou na webu vidět dost dlouho na repost.
     - cron: '0 13 * 6,7 *'

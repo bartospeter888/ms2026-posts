@@ -2,9 +2,9 @@
 """Poll WC 2026 match results during evening windows and append newly-finished
 matches to matches.json as soon as they appear.
 
-Run every 10 min during 17:00-06:59 UTC (evening kickoffs + late finishes),
-plus a daily cleanup pass at 13:00 UTC that resets matches.json /
-processed_ids.json for the next game day.
+Run every 10 min during 11:00-08:59 UTC (afternoon/evening kickoffs +
+late finishes), plus a daily cleanup pass at 13:00 UTC that resets
+matches.json / processed_ids.json for the next game day.
 
 Goal scorers are enriched via TheSportsDB v1 (free key '123').
 """
@@ -30,9 +30,10 @@ TOURNAMENT_END   = date(2026, 7, 19)
 
 
 def game_day_for(now: datetime) -> date:
-    """Evening matches (17:00-23:59 UTC) and their late finishes (00:00-06:59
-    UTC the next day) both belong to the calendar date the evening started on."""
-    if now.hour >= 17:
+    """Afternoon/evening matches (11:00-23:59 UTC) and their late finishes
+    (00:00-10:59 UTC the next day) both belong to the calendar date the
+    afternoon/evening started on."""
+    if now.hour >= 11:
         return now.date()
     return now.date() - timedelta(days=1)
 
