@@ -192,31 +192,39 @@ async function exportCard(matchId) {
   const restore = await inlineImages(card);
 
   try {
-    // imagePlaceholder: transparent 1px — prevents reject on any remaining CORS failures
-    const dataUrl = await domtoimage.toPng(card, {
+    // html2canvas draws each element via canvas APIs directly, which handles
+    // <img> photo elements with data: URLs far more reliably on mobile
+    // browsers than dom-to-image's SVG-foreignObject approach (which can
+    // silently drop the photo on mobile Safari).
+    const canvas = await html2canvas(card, {
       width: 1080, height: 1350,
-      imagePlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQI12NgAAIABQAABjE+ibYAAAAASUVORK5CYII=',
+      scale: 1, useCORS: true, allowTaint: false,
+      backgroundColor: '#0d1b3e',
+      logging: false,
     });
-    const a = document.createElement('a');
-    a.href     = dataUrl;
-    a.download = `ms2026_${matchId}.png`;
-    a.click();
-  } catch (err) {
-    console.warn('dom-to-image failed, trying html2canvas:', err);
-    try {
-      const canvas = await html2canvas(card, {
-        width: 1080, height: 1350,
-        scale: 1, useCORS: true, allowTaint: false,
-        logging: false,
-      });
+    await new Promise((resolve, reject) => {
       canvas.toBlob(blob => {
-        if (!blob) { alert('Export se nezdařil.'); return; }
+        if (!blob) { reject(new Error('toBlob returned null')); return; }
         const url = URL.createObjectURL(blob);
         const a   = document.createElement('a');
         a.href = url; a.download = `ms2026_${matchId}.png`;
         a.click();
         URL.revokeObjectURL(url);
+        resolve();
       }, 'image/png');
+    });
+  } catch (err) {
+    console.warn('html2canvas failed, trying dom-to-image:', err);
+    try {
+      // imagePlaceholder: transparent 1px — prevents reject on any remaining CORS failures
+      const dataUrl = await domtoimage.toPng(card, {
+        width: 1080, height: 1350,
+        imagePlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQI12NgAAIABQAABjE+ibYAAAAASUVORK5CYII=',
+      });
+      const a = document.createElement('a');
+      a.href     = dataUrl;
+      a.download = `ms2026_${matchId}.png`;
+      a.click();
     } catch (err2) {
       alert('Export se nezdařil. Zkus screenshot telefonu.');
       console.error(err2);
