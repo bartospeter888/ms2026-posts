@@ -186,7 +186,7 @@ def _scorer_list_html(scorers: list, all_max_rows: int) -> str:
     """Build scorer-list HTML for one team. Font scales with total row count."""
     if not scorers:
         return ""
-    font_size = 26 if all_max_rows <= 3 else 22 if all_max_rows <= 5 else 18
+    font_size = 29 if all_max_rows <= 3 else 24 if all_max_rows <= 5 else 20
     items = "".join(f'<div class="scorer-item">{esc(s)}</div>'
                     for s in _merge_goals(scorers))
     return f'<div class="scorer-list" style="font-size:{font_size}px">{items}</div>'

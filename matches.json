@@ -2,6 +2,34 @@
   "date": "2026-06-13",
   "matches": [
     {
+      "id": "537333b",
+      "utcDate": "2026-06-13T16:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": null,
+      "home": {
+        "name": "Australia",
+        "shortName": "Australia",
+        "tla": "AUS",
+        "crest": "https://crests.football-data.org/australia.svg"
+      },
+      "away": {
+        "name": "Turkey",
+        "shortName": "Turkey",
+        "tla": "TUR",
+        "crest": "https://crests.football-data.org/turkey.svg"
+      },
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "scorers_home": [
+        "27' Nestory Irankunda",
+        "75' Connor Metcalfe"
+      ],
+      "scorers_away": []
+    },
+    {
       "id": 537334,
       "utcDate": "2026-06-13T19:00:00Z",
       "matchday": 1,
@@ -23,7 +51,9 @@
         "home": 1,
         "away": 1
       },
-      "scorers_home": [],
+      "scorers_home": [
+        "90+5' Boualem Khoukhi"
+      ],
       "scorers_away": [
         "17' Breel Embolo"
       ]
