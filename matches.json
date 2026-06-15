@@ -25,6 +25,31 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537369,
+      "utcDate": "2026-06-15T16:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_H",
+      "home": {
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP",
+        "crest": "https://crests.football-data.org/760.svg"
+      },
+      "away": {
+        "name": "Cape Verde Islands",
+        "shortName": "Cape Verde",
+        "tla": "CPV",
+        "crest": "https://crests.football-data.org/cape_verde.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
