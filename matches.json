@@ -50,6 +50,33 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537363,
+      "utcDate": "2026-06-15T19:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_G",
+      "home": {
+        "name": "Belgium",
+        "shortName": "Belgium",
+        "tla": "BEL",
+        "crest": "https://crests.football-data.org/805.svg"
+      },
+      "away": {
+        "name": "Egypt",
+        "shortName": "Egypt",
+        "tla": "EGY",
+        "crest": "https://crests.football-data.org/825.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": [
+        "19' Emam Ashour"
+      ]
     }
   ]
 }
