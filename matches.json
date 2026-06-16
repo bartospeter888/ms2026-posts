@@ -102,6 +102,36 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537364,
+      "utcDate": "2026-06-16T01:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_G",
+      "home": {
+        "name": "Iran",
+        "shortName": "Iran",
+        "tla": "IRN",
+        "crest": "https://crests.football-data.org/iran.svg"
+      },
+      "away": {
+        "name": "New Zealand",
+        "shortName": "New Zealand",
+        "tla": "NZL",
+        "crest": "https://crests.football-data.org/783.svg"
+      },
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "scorers_home": [
+        "32' Ramin Rezaeian"
+      ],
+      "scorers_away": [
+        "7' Elijah Just",
+        "54' Elijah Just"
+      ]
     }
   ]
 }
