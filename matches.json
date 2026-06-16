@@ -1,137 +1,33 @@
 {
-  "date": "2026-06-15",
+  "date": "2026-06-16",
   "matches": [
     {
-      "id": 537358,
-      "utcDate": "2026-06-15T02:00:00Z",
+      "id": 537391,
+      "utcDate": "2026-06-16T19:00:00Z",
       "matchday": 1,
       "stage": "GROUP_STAGE",
-      "group": "GROUP_F",
+      "group": "GROUP_I",
       "home": {
-        "name": "Sweden",
-        "shortName": "Sweden",
-        "tla": "SWE",
-        "crest": "https://crests.football-data.org/792.svg"
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
       },
       "away": {
-        "name": "Tunisia",
-        "shortName": "Tunisia",
-        "tla": "TUN",
-        "crest": "https://crests.football-data.org/tunisia.svg"
+        "name": "Senegal",
+        "shortName": "Senegal",
+        "tla": "SEN",
+        "crest": "https://crests.football-data.org/senegal.svg"
       },
       "score": {
-        "home": 5,
+        "home": 3,
         "away": 1
-      },
-      "scorers_home": [],
-      "scorers_away": []
-    },
-    {
-      "id": 537369,
-      "utcDate": "2026-06-15T16:00:00Z",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_H",
-      "home": {
-        "name": "Spain",
-        "shortName": "Spain",
-        "tla": "ESP",
-        "crest": "https://crests.football-data.org/760.svg"
-      },
-      "away": {
-        "name": "Cape Verde Islands",
-        "shortName": "Cape Verde",
-        "tla": "CPV",
-        "crest": "https://crests.football-data.org/cape_verde.svg"
-      },
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "scorers_home": [],
-      "scorers_away": []
-    },
-    {
-      "id": 537363,
-      "utcDate": "2026-06-15T19:00:00Z",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_G",
-      "home": {
-        "name": "Belgium",
-        "shortName": "Belgium",
-        "tla": "BEL",
-        "crest": "https://crests.football-data.org/805.svg"
-      },
-      "away": {
-        "name": "Egypt",
-        "shortName": "Egypt",
-        "tla": "EGY",
-        "crest": "https://crests.football-data.org/825.svg"
-      },
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "scorers_home": [],
-      "scorers_away": [
-        "19' Emam Ashour"
-      ]
-    },
-    {
-      "id": 537370,
-      "utcDate": "2026-06-15T22:00:00Z",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_H",
-      "home": {
-        "name": "Saudi Arabia",
-        "shortName": "Saudi Arabia",
-        "tla": "KSA",
-        "crest": "https://crests.football-data.org/saudi_arabia.svg"
-      },
-      "away": {
-        "name": "Uruguay",
-        "shortName": "Uruguay",
-        "tla": "URU",
-        "crest": "https://crests.football-data.org/758.svg"
-      },
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "scorers_home": [],
-      "scorers_away": []
-    },
-    {
-      "id": 537364,
-      "utcDate": "2026-06-16T01:00:00Z",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_G",
-      "home": {
-        "name": "Iran",
-        "shortName": "Iran",
-        "tla": "IRN",
-        "crest": "https://crests.football-data.org/iran.svg"
-      },
-      "away": {
-        "name": "New Zealand",
-        "shortName": "New Zealand",
-        "tla": "NZL",
-        "crest": "https://crests.football-data.org/783.svg"
-      },
-      "score": {
-        "home": 2,
-        "away": 2
       },
       "scorers_home": [
-        "32' Ramin Rezaeian"
+        "66' Kylian Mbappé",
+        "82' Bradley Barcola"
       ],
-      "scorers_away": [
-        "7' Elijah Just",
-        "54' Elijah Just"
-      ]
+      "scorers_away": []
     }
   ]
 }
