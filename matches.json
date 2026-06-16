@@ -77,6 +77,31 @@
       "scorers_away": [
         "19' Emam Ashour"
       ]
+    },
+    {
+      "id": 537370,
+      "utcDate": "2026-06-15T22:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_H",
+      "home": {
+        "name": "Saudi Arabia",
+        "shortName": "Saudi Arabia",
+        "tla": "KSA",
+        "crest": "https://crests.football-data.org/saudi_arabia.svg"
+      },
+      "away": {
+        "name": "Uruguay",
+        "shortName": "Uruguay",
+        "tla": "URU",
+        "crest": "https://crests.football-data.org/758.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
