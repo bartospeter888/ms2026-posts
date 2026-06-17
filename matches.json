@@ -58,6 +58,62 @@
         "29' Erling Haaland",
         "43' Erling Haaland"
       ]
+    },
+    {
+      "id": 537397,
+      "utcDate": "2026-06-17T01:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_J",
+      "home": {
+        "name": "Argentina",
+        "shortName": "Argentina",
+        "tla": "ARG",
+        "crest": "https://crests.football-data.org/762.png"
+      },
+      "away": {
+        "name": "Algeria",
+        "shortName": "Algeria",
+        "tla": "ALG",
+        "crest": "https://crests.football-data.org/algeria.svg"
+      },
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "scorers_home": [
+        "17' Lionel Messi"
+      ],
+      "scorers_away": []
+    },
+    {
+      "id": 537398,
+      "utcDate": "2026-06-17T04:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_J",
+      "home": {
+        "name": "Austria",
+        "shortName": "Austria",
+        "tla": "AUT",
+        "crest": "https://crests.football-data.org/816.svg"
+      },
+      "away": {
+        "name": "Jordan",
+        "shortName": "Jordan",
+        "tla": "JOR",
+        "crest": "https://crests.football-data.org/8049.png"
+      },
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "scorers_home": [
+        "21' Romano Schmid"
+      ],
+      "scorers_away": [
+        "50' Ali Olwan"
+      ]
     }
   ]
 }
