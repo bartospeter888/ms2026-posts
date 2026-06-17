@@ -1,119 +1,30 @@
 {
-  "date": "2026-06-16",
+  "date": "2026-06-17",
   "matches": [
     {
-      "id": 537391,
-      "utcDate": "2026-06-16T19:00:00Z",
+      "id": 537403,
+      "utcDate": "2026-06-17T17:00:00Z",
       "matchday": 1,
       "stage": "GROUP_STAGE",
-      "group": "GROUP_I",
+      "group": "GROUP_K",
       "home": {
-        "name": "France",
-        "shortName": "France",
-        "tla": "FRA",
-        "crest": "https://crests.football-data.org/773.svg"
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR",
+        "crest": "https://crests.football-data.org/765.svg"
       },
       "away": {
-        "name": "Senegal",
-        "shortName": "Senegal",
-        "tla": "SEN",
-        "crest": "https://crests.football-data.org/senegal.svg"
-      },
-      "score": {
-        "home": 3,
-        "away": 1
-      },
-      "scorers_home": [
-        "66' Kylian Mbappé",
-        "82' Bradley Barcola"
-      ],
-      "scorers_away": []
-    },
-    {
-      "id": 537392,
-      "utcDate": "2026-06-16T22:00:00Z",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_I",
-      "home": {
-        "name": "Iraq",
-        "shortName": "Iraq",
-        "tla": "IRQ",
-        "crest": "https://crests.football-data.org/iraq.svg"
-      },
-      "away": {
-        "name": "Norway",
-        "shortName": "Norway",
-        "tla": "NOR",
-        "crest": "https://crests.football-data.org/813.svg"
+        "name": "Congo DR",
+        "shortName": "Congo DR",
+        "tla": "COD",
+        "crest": "https://crests.football-data.org/congo_dr.svg"
       },
       "score": {
         "home": 1,
-        "away": 4
-      },
-      "scorers_home": [
-        "39' Aymen Hussein"
-      ],
-      "scorers_away": [
-        "29' Erling Haaland",
-        "43' Erling Haaland"
-      ]
-    },
-    {
-      "id": 537397,
-      "utcDate": "2026-06-17T01:00:00Z",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_J",
-      "home": {
-        "name": "Argentina",
-        "shortName": "Argentina",
-        "tla": "ARG",
-        "crest": "https://crests.football-data.org/762.png"
-      },
-      "away": {
-        "name": "Algeria",
-        "shortName": "Algeria",
-        "tla": "ALG",
-        "crest": "https://crests.football-data.org/algeria.svg"
-      },
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "scorers_home": [
-        "17' Lionel Messi"
-      ],
-      "scorers_away": []
-    },
-    {
-      "id": 537398,
-      "utcDate": "2026-06-17T04:00:00Z",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_J",
-      "home": {
-        "name": "Austria",
-        "shortName": "Austria",
-        "tla": "AUT",
-        "crest": "https://crests.football-data.org/816.svg"
-      },
-      "away": {
-        "name": "Jordan",
-        "shortName": "Jordan",
-        "tla": "JOR",
-        "crest": "https://crests.football-data.org/8049.png"
-      },
-      "score": {
-        "home": 3,
         "away": 1
       },
-      "scorers_home": [
-        "21' Romano Schmid"
-      ],
-      "scorers_away": [
-        "50' Ali Olwan"
-      ]
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
