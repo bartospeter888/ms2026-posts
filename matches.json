@@ -28,6 +28,36 @@
         "82' Bradley Barcola"
       ],
       "scorers_away": []
+    },
+    {
+      "id": 537392,
+      "utcDate": "2026-06-16T22:00:00Z",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_I",
+      "home": {
+        "name": "Iraq",
+        "shortName": "Iraq",
+        "tla": "IRQ",
+        "crest": "https://crests.football-data.org/iraq.svg"
+      },
+      "away": {
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR",
+        "crest": "https://crests.football-data.org/813.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "scorers_home": [
+        "39' Aymen Hussein"
+      ],
+      "scorers_away": [
+        "29' Erling Haaland",
+        "43' Erling Haaland"
+      ]
     }
   ]
 }
