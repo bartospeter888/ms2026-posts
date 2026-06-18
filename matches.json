@@ -27,6 +27,31 @@
       "scorers_away": [
         "40' Daniel Muñoz"
       ]
+    },
+    {
+      "id": 537329,
+      "utcDate": "2026-06-18T16:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A",
+      "home": {
+        "name": "Czechia",
+        "shortName": "Czechia",
+        "tla": "CZE",
+        "crest": "https://crests.football-data.org/798.svg"
+      },
+      "away": {
+        "name": "South Africa",
+        "shortName": "South Africa",
+        "tla": "RSA",
+        "crest": "https://crests.football-data.org/9396.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
