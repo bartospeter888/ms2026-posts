@@ -105,6 +105,33 @@
         "29' Jonathan David"
       ],
       "scorers_away": []
+    },
+    {
+      "id": 537330,
+      "utcDate": "2026-06-19T01:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A",
+      "home": {
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX",
+        "crest": "https://crests.football-data.org/769.svg"
+      },
+      "away": {
+        "name": "South Korea",
+        "shortName": "Korea Republic",
+        "tla": "KOR",
+        "crest": "https://crests.football-data.org/772.png"
+      },
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "scorers_home": [
+        "50' Luis Romo"
+      ],
+      "scorers_away": []
     }
   ]
 }
