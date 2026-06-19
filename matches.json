@@ -77,6 +77,34 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537336,
+      "utcDate": "2026-06-18T22:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_B",
+      "home": {
+        "name": "Canada",
+        "shortName": "Canada",
+        "tla": "CAN",
+        "crest": "https://crests.football-data.org/canada.svg"
+      },
+      "away": {
+        "name": "Qatar",
+        "shortName": "Qatar",
+        "tla": "QAT",
+        "crest": "https://crests.football-data.org/8030.svg"
+      },
+      "score": {
+        "home": 6,
+        "away": 0
+      },
+      "scorers_home": [
+        "16' Cyle Larin",
+        "29' Jonathan David"
+      ],
+      "scorers_away": []
     }
   ]
 }
