@@ -28,6 +28,58 @@
         "43' Alex Freeman"
       ],
       "scorers_away": []
+    },
+    {
+      "id": 537342,
+      "utcDate": "2026-06-19T22:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_C",
+      "home": {
+        "name": "Scotland",
+        "shortName": "Scotland",
+        "tla": "SCO",
+        "crest": "https://crests.football-data.org/814.svg"
+      },
+      "away": {
+        "name": "Morocco",
+        "shortName": "Morocco",
+        "tla": "MAR",
+        "crest": "https://crests.football-data.org/morocco.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": [
+        "2' Ismael Saibari"
+      ]
+    },
+    {
+      "id": 537341,
+      "utcDate": "2026-06-20T00:30:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_C",
+      "home": {
+        "name": "Brazil",
+        "shortName": "Brazil",
+        "tla": "BRA",
+        "crest": "https://crests.football-data.org/764.svg"
+      },
+      "away": {
+        "name": "Haiti",
+        "shortName": "Haiti",
+        "tla": "HAI",
+        "crest": "https://crests.football-data.org/haiti.svg"
+      },
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
