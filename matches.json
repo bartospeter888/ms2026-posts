@@ -80,6 +80,33 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537347,
+      "utcDate": "2026-06-20T03:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_D",
+      "home": {
+        "name": "Turkey",
+        "shortName": "Turkey",
+        "tla": "TUR",
+        "crest": "https://crests.football-data.org/803.svg"
+      },
+      "away": {
+        "name": "Paraguay",
+        "shortName": "Paraguay",
+        "tla": "PAR",
+        "crest": "https://crests.football-data.org/761.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": [
+        "2' Matías Galarza"
+      ]
     }
   ]
 }
