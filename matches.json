@@ -25,6 +25,33 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537353,
+      "utcDate": "2026-06-20T20:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_E",
+      "home": {
+        "name": "Germany",
+        "shortName": "Germany",
+        "tla": "GER",
+        "crest": "https://crests.football-data.org/759.svg"
+      },
+      "away": {
+        "name": "Ivory Coast",
+        "shortName": "Ivory Coast",
+        "tla": "CIV",
+        "crest": "https://crests.football-data.org/787.svg"
+      },
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": [
+        "30' Franck Kessié"
+      ]
     }
   ]
 }
