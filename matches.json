@@ -53,6 +53,31 @@
         "4' Daichi Kamada",
         "31' Ayase Ueda"
       ]
+    },
+    {
+      "id": 537371,
+      "utcDate": "2026-06-21T16:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_H",
+      "home": {
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP",
+        "crest": "https://crests.football-data.org/760.svg"
+      },
+      "away": {
+        "name": "Saudi Arabia",
+        "shortName": "Saudi Arabia",
+        "tla": "KSA",
+        "crest": "https://crests.football-data.org/saudi_arabia.svg"
+      },
+      "score": {
+        "home": 5,
+        "away": 0
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
