@@ -78,6 +78,31 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537365,
+      "utcDate": "2026-06-21T19:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_G",
+      "home": {
+        "name": "Belgium",
+        "shortName": "Belgium",
+        "tla": "BEL",
+        "crest": "https://crests.football-data.org/805.svg"
+      },
+      "away": {
+        "name": "Iran",
+        "shortName": "Iran",
+        "tla": "IRN",
+        "crest": "https://crests.football-data.org/iran.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
