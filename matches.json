@@ -1,158 +1,31 @@
 {
-  "date": "2026-06-21",
+  "date": "2026-06-22",
   "matches": [
     {
-      "id": 537354,
-      "utcDate": "2026-06-21T00:00:00Z",
+      "id": 537399,
+      "utcDate": "2026-06-22T17:00:00Z",
       "matchday": 2,
       "stage": "GROUP_STAGE",
-      "group": "GROUP_E",
+      "group": "GROUP_J",
       "home": {
-        "name": "Ecuador",
-        "shortName": "Ecuador",
-        "tla": "ECU",
-        "crest": "https://crests.football-data.org/791.svg"
+        "name": "Argentina",
+        "shortName": "Argentina",
+        "tla": "ARG",
+        "crest": "https://crests.football-data.org/762.png"
       },
       "away": {
-        "name": "Curaçao",
-        "shortName": "Curaçao",
-        "tla": "CUW",
-        "crest": "https://crests.football-data.org/curacao.svg"
-      },
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "scorers_home": [],
-      "scorers_away": []
-    },
-    {
-      "id": 537360,
-      "utcDate": "2026-06-21T04:00:00Z",
-      "matchday": 2,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_F",
-      "home": {
-        "name": "Tunisia",
-        "shortName": "Tunisia",
-        "tla": "TUN",
-        "crest": "https://crests.football-data.org/tunisia.svg"
-      },
-      "away": {
-        "name": "Japan",
-        "shortName": "Japan",
-        "tla": "JPN",
-        "crest": "https://crests.football-data.org/766.svg"
-      },
-      "score": {
-        "home": 0,
-        "away": 4
-      },
-      "scorers_home": [],
-      "scorers_away": [
-        "4' Daichi Kamada",
-        "31' Ayase Ueda"
-      ]
-    },
-    {
-      "id": 537371,
-      "utcDate": "2026-06-21T16:00:00Z",
-      "matchday": 2,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_H",
-      "home": {
-        "name": "Spain",
-        "shortName": "Spain",
-        "tla": "ESP",
-        "crest": "https://crests.football-data.org/760.svg"
-      },
-      "away": {
-        "name": "Saudi Arabia",
-        "shortName": "Saudi Arabia",
-        "tla": "KSA",
-        "crest": "https://crests.football-data.org/saudi_arabia.svg"
-      },
-      "score": {
-        "home": 5,
-        "away": 0
-      },
-      "scorers_home": [],
-      "scorers_away": []
-    },
-    {
-      "id": 537365,
-      "utcDate": "2026-06-21T19:00:00Z",
-      "matchday": 2,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_G",
-      "home": {
-        "name": "Belgium",
-        "shortName": "Belgium",
-        "tla": "BEL",
-        "crest": "https://crests.football-data.org/805.svg"
-      },
-      "away": {
-        "name": "Iran",
-        "shortName": "Iran",
-        "tla": "IRN",
-        "crest": "https://crests.football-data.org/iran.svg"
-      },
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "scorers_home": [],
-      "scorers_away": []
-    },
-    {
-      "id": 537372,
-      "utcDate": "2026-06-21T22:00:00Z",
-      "matchday": 2,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_H",
-      "home": {
-        "name": "Uruguay",
-        "shortName": "Uruguay",
-        "tla": "URU",
-        "crest": "https://crests.football-data.org/758.svg"
-      },
-      "away": {
-        "name": "Cape Verde Islands",
-        "shortName": "Cape Verde",
-        "tla": "CPV",
-        "crest": "https://crests.football-data.org/cape_verde.svg"
+        "name": "Austria",
+        "shortName": "Austria",
+        "tla": "AUT",
+        "crest": "https://crests.football-data.org/816.svg"
       },
       "score": {
         "home": 2,
-        "away": 2
-      },
-      "scorers_home": [],
-      "scorers_away": []
-    },
-    {
-      "id": 537366,
-      "utcDate": "2026-06-22T01:00:00Z",
-      "matchday": 2,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_G",
-      "home": {
-        "name": "New Zealand",
-        "shortName": "New Zealand",
-        "tla": "NZL",
-        "crest": "https://crests.football-data.org/783.svg"
-      },
-      "away": {
-        "name": "Egypt",
-        "shortName": "Egypt",
-        "tla": "EGY",
-        "crest": "https://crests.football-data.org/825.svg"
-      },
-      "score": {
-        "home": 1,
-        "away": 3
+        "away": 0
       },
       "scorers_home": [
-        "15' Finn Surman"
+        "9' Lionel Messi",
+        "38' Lionel Messi"
       ],
       "scorers_away": []
     }
