@@ -57,6 +57,31 @@
         "36' Nizar Al-Rashdan"
       ],
       "scorers_away": []
+    },
+    {
+      "id": 537405,
+      "utcDate": "2026-06-23T17:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_K",
+      "home": {
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR",
+        "crest": "https://crests.football-data.org/765.svg"
+      },
+      "away": {
+        "name": "Uzbekistan",
+        "shortName": "Uzbekistan",
+        "tla": "UZB",
+        "crest": "https://crests.football-data.org/8070.png"
+      },
+      "score": {
+        "home": 5,
+        "away": 0
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
