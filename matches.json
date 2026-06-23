@@ -28,6 +28,67 @@
         "38' Lionel Messi"
       ],
       "scorers_away": []
+    },
+    {
+      "id": 537393,
+      "utcDate": "2026-06-22T21:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_I",
+      "home": {
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
+      },
+      "away": {
+        "name": "Iraq",
+        "shortName": "Iraq",
+        "tla": "IRQ",
+        "crest": "https://crests.football-data.org/iraq.svg"
+      },
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "scorers_home": [
+        "14' Kylian Mbappé",
+        "54' Kylian Mbappé",
+        "66' Ousmane Dembélé"
+      ],
+      "scorers_away": []
+    },
+    {
+      "id": 537394,
+      "utcDate": "2026-06-23T00:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_I",
+      "home": {
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR",
+        "crest": "https://crests.football-data.org/813.svg"
+      },
+      "away": {
+        "name": "Senegal",
+        "shortName": "Senegal",
+        "tla": "SEN",
+        "crest": "https://crests.football-data.org/senegal.svg"
+      },
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "scorers_home": [
+        "43' Marcus Pedersen",
+        "48' Erling Haaland",
+        "58' Erling Haaland"
+      ],
+      "scorers_away": [
+        "53' Ismaïla Sarr",
+        "93' Ismaïla Sarr"
+      ]
     }
   ]
 }
