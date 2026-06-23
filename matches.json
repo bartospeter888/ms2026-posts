@@ -89,6 +89,35 @@
         "53' Ismaïla Sarr",
         "93' Ismaïla Sarr"
       ]
+    },
+    {
+      "id": 537400,
+      "utcDate": "2026-06-23T03:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_J",
+      "home": {
+        "name": "Jordan",
+        "shortName": "Jordan",
+        "tla": "JOR",
+        "crest": "https://crests.football-data.org/8049.png"
+      },
+      "away": {
+        "name": "Algeria",
+        "shortName": "Algeria",
+        "tla": "ALG",
+        "crest": "https://crests.football-data.org/algeria.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "scorers_home": [
+        "36' Nizar Al-Rashdan"
+      ],
+      "scorers_away": [
+        "69' Nadhir Benbouali"
+      ]
     }
   ]
 }
