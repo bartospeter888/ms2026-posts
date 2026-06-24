@@ -1,4 +1,30 @@
 {
-  "date": "",
-  "matches": []
+  "date": "2026-06-24",
+  "matches": [
+    {
+      "id": 537406,
+      "utcDate": "2026-06-24T02:00:00Z",
+      "matchday": 2,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_K",
+      "home": {
+        "name": "Colombia",
+        "shortName": "Colombia",
+        "tla": "COL",
+        "crest": "https://crests.football-data.org/818.svg"
+      },
+      "away": {
+        "name": "Congo DR",
+        "shortName": "Congo DR",
+        "tla": "COD",
+        "crest": "https://crests.football-data.org/congo_dr.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "scorers_home": [],
+      "scorers_away": []
+    }
+  ]
 }
