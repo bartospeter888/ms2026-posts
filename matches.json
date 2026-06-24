@@ -25,6 +25,59 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537337,
+      "utcDate": "2026-06-24T19:00:00Z",
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_B",
+      "home": {
+        "name": "Switzerland",
+        "shortName": "Switzerland",
+        "tla": "SUI",
+        "crest": "https://crests.football-data.org/788.svg"
+      },
+      "away": {
+        "name": "Canada",
+        "shortName": "Canada",
+        "tla": "CAN",
+        "crest": "https://crests.football-data.org/canada.svg"
+      },
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "scorers_home": [
+        "46' Rubén Vargas",
+        "57' Johan Manzambi"
+      ],
+      "scorers_away": []
+    },
+    {
+      "id": 537338,
+      "utcDate": "2026-06-24T19:00:00Z",
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_B",
+      "home": {
+        "name": "Bosnia-Herzegovina",
+        "shortName": "Bosnia-H.",
+        "tla": "BIH",
+        "crest": "https://crests.football-data.org/bosnia.svg"
+      },
+      "away": {
+        "name": "Qatar",
+        "shortName": "Qatar",
+        "tla": "QAT",
+        "crest": "https://crests.football-data.org/8030.svg"
+      },
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
