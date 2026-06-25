@@ -138,6 +138,56 @@
         "45' Vinícius Júnior",
         "60' Matheus Cunha"
       ]
+    },
+    {
+      "id": 537331,
+      "utcDate": "2026-06-25T01:00:00Z",
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A",
+      "home": {
+        "name": "Czechia",
+        "shortName": "Czechia",
+        "tla": "CZE",
+        "crest": "https://crests.football-data.org/798.svg"
+      },
+      "away": {
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX",
+        "crest": "https://crests.football-data.org/769.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "scorers_home": [],
+      "scorers_away": []
+    },
+    {
+      "id": 537332,
+      "utcDate": "2026-06-25T01:00:00Z",
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A",
+      "home": {
+        "name": "South Africa",
+        "shortName": "South Africa",
+        "tla": "RSA",
+        "crest": "https://crests.football-data.org/9396.svg"
+      },
+      "away": {
+        "name": "South Korea",
+        "shortName": "Korea Republic",
+        "tla": "KOR",
+        "crest": "https://crests.football-data.org/772.png"
+      },
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
