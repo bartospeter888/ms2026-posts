@@ -159,6 +159,56 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537349,
+      "utcDate": "2026-06-26T02:00:00Z",
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_D",
+      "home": {
+        "name": "Turkey",
+        "shortName": "Turkey",
+        "tla": "TUR",
+        "crest": "https://crests.football-data.org/803.svg"
+      },
+      "away": {
+        "name": "United States",
+        "shortName": "USA",
+        "tla": "USA",
+        "crest": "https://crests.football-data.org/usa.svg"
+      },
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "scorers_home": [],
+      "scorers_away": []
+    },
+    {
+      "id": 537350,
+      "utcDate": "2026-06-26T02:00:00Z",
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_D",
+      "home": {
+        "name": "Paraguay",
+        "shortName": "Paraguay",
+        "tla": "PAR",
+        "crest": "https://crests.football-data.org/761.svg"
+      },
+      "away": {
+        "name": "Australia",
+        "shortName": "Australia",
+        "tla": "AUS",
+        "crest": "https://crests.football-data.org/779.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
