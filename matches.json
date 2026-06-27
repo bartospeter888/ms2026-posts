@@ -112,6 +112,114 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537373,
+      "utcDate": "2026-06-27T00:00:00Z",
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_H",
+      "home": {
+        "name": "Uruguay",
+        "shortName": "Uruguay",
+        "tla": "URU",
+        "crest": "https://crests.football-data.org/758.svg"
+      },
+      "away": {
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP",
+        "crest": "https://crests.football-data.org/760.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": []
+    },
+    {
+      "id": 537374,
+      "utcDate": "2026-06-27T00:00:00Z",
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_H",
+      "home": {
+        "name": "Cape Verde Islands",
+        "shortName": "Cape Verde",
+        "tla": "CPV",
+        "crest": "https://crests.football-data.org/cape_verde.svg"
+      },
+      "away": {
+        "name": "Saudi Arabia",
+        "shortName": "Saudi Arabia",
+        "tla": "KSA",
+        "crest": "https://crests.football-data.org/saudi_arabia.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "scorers_home": [],
+      "scorers_away": []
+    },
+    {
+      "id": 537367,
+      "utcDate": "2026-06-27T03:00:00Z",
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_G",
+      "home": {
+        "name": "New Zealand",
+        "shortName": "New Zealand",
+        "tla": "NZL",
+        "crest": "https://crests.football-data.org/783.svg"
+      },
+      "away": {
+        "name": "Belgium",
+        "shortName": "Belgium",
+        "tla": "BEL",
+        "crest": "https://crests.football-data.org/805.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 5
+      },
+      "scorers_home": [],
+      "scorers_away": [
+        "28' Leandro Trossard",
+        "50' Leandro Trossard"
+      ]
+    },
+    {
+      "id": 537368,
+      "utcDate": "2026-06-27T03:00:00Z",
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_G",
+      "home": {
+        "name": "Egypt",
+        "shortName": "Egypt",
+        "tla": "EGY",
+        "crest": "https://crests.football-data.org/825.svg"
+      },
+      "away": {
+        "name": "Iran",
+        "shortName": "Iran",
+        "tla": "IRN",
+        "crest": "https://crests.football-data.org/iran.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "scorers_home": [
+        "5' Mahmoud Abdelmohsen Hassan"
+      ],
+      "scorers_away": [
+        "11' Mehdi Taremi",
+        "14' Ramin Rezaeian"
+      ]
     }
   ]
 }
