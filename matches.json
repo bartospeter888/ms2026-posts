@@ -50,6 +50,31 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537407,
+      "utcDate": "2026-06-27T23:30:00Z",
+      "matchday": 3,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_K",
+      "home": {
+        "name": "Colombia",
+        "shortName": "Colombia",
+        "tla": "COL",
+        "crest": "https://crests.football-data.org/818.svg"
+      },
+      "away": {
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR",
+        "crest": "https://crests.football-data.org/765.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
