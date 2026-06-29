@@ -27,6 +27,35 @@
       "scorers_away": [
         "29' Kaishū Sano"
       ]
+    },
+    {
+      "id": 537415,
+      "utcDate": "2026-06-29T20:30:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "Germany",
+        "shortName": "Germany",
+        "tla": "GER",
+        "crest": "https://crests.football-data.org/759.svg"
+      },
+      "away": {
+        "name": "Paraguay",
+        "shortName": "Paraguay",
+        "tla": "PAR",
+        "crest": "https://crests.football-data.org/761.svg"
+      },
+      "score": {
+        "home": 5,
+        "away": 6
+      },
+      "scorers_home": [
+        "54' Kai Havertz"
+      ],
+      "scorers_away": [
+        "42' Julio Enciso"
+      ]
     }
   ]
 }
