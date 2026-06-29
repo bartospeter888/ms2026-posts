@@ -1,30 +1,32 @@
 {
-  "date": "2026-06-28",
+  "date": "2026-06-29",
   "matches": [
     {
-      "id": 537417,
-      "utcDate": "2026-06-28T19:00:00Z",
+      "id": 537423,
+      "utcDate": "2026-06-29T17:00:00Z",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
       "home": {
-        "name": "South Africa",
-        "shortName": "South Africa",
-        "tla": "RSA",
-        "crest": "https://crests.football-data.org/9396.svg"
+        "name": "Brazil",
+        "shortName": "Brazil",
+        "tla": "BRA",
+        "crest": "https://crests.football-data.org/764.svg"
       },
       "away": {
-        "name": "Canada",
-        "shortName": "Canada",
-        "tla": "CAN",
-        "crest": "https://crests.football-data.org/canada.svg"
+        "name": "Japan",
+        "shortName": "Japan",
+        "tla": "JPN",
+        "crest": "https://crests.football-data.org/766.svg"
       },
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 1
       },
       "scorers_home": [],
-      "scorers_away": []
+      "scorers_away": [
+        "29' Kaishū Sano"
+      ]
     }
   ]
 }
