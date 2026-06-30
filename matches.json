@@ -56,6 +56,33 @@
       "scorers_away": [
         "42' Julio Enciso"
       ]
+    },
+    {
+      "id": 537418,
+      "utcDate": "2026-06-30T01:00:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "Netherlands",
+        "shortName": "Netherlands",
+        "tla": "NED",
+        "crest": "https://crests.football-data.org/8601.svg"
+      },
+      "away": {
+        "name": "Morocco",
+        "shortName": "Morocco",
+        "tla": "MAR",
+        "crest": "https://crests.football-data.org/morocco.svg"
+      },
+      "score": {
+        "home": 3,
+        "away": 4
+      },
+      "scorers_home": [
+        "72' Cody Gakpo"
+      ],
+      "scorers_away": []
     }
   ]
 }
