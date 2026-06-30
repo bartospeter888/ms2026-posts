@@ -54,6 +54,34 @@
       "scorers_away": [
         "39' Antonio Nusa"
       ]
+    },
+    {
+      "id": 537416,
+      "utcDate": "2026-06-30T21:00:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
+      },
+      "away": {
+        "name": "Sweden",
+        "shortName": "Sweden",
+        "tla": "SWE",
+        "crest": "https://crests.football-data.org/792.svg"
+      },
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "scorers_home": [
+        "45' Kylian Mbappé",
+        "53' Bradley Barcola"
+      ],
+      "scorers_away": []
     }
   ]
 }
