@@ -27,6 +27,33 @@
         "72' Cody Gakpo"
       ],
       "scorers_away": []
+    },
+    {
+      "id": 537424,
+      "utcDate": "2026-06-30T17:00:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "Ivory Coast",
+        "shortName": "Ivory Coast",
+        "tla": "CIV",
+        "crest": "https://crests.football-data.org/787.svg"
+      },
+      "away": {
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR",
+        "crest": "https://crests.football-data.org/813.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "scorers_home": [],
+      "scorers_away": [
+        "39' Antonio Nusa"
+      ]
     }
   ]
 }
