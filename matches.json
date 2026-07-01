@@ -28,6 +28,31 @@
         "31' Raúl Jiménez"
       ],
       "scorers_away": []
+    },
+    {
+      "id": 537426,
+      "utcDate": "2026-07-01T16:00:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "England",
+        "shortName": "England",
+        "tla": "ENG",
+        "crest": "https://crests.football-data.org/770.svg"
+      },
+      "away": {
+        "name": "Congo DR",
+        "shortName": "Congo DR",
+        "tla": "COD",
+        "crest": "https://crests.football-data.org/congo_dr.svg"
+      },
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
