@@ -1,4 +1,33 @@
 {
-  "date": "",
-  "matches": []
+  "date": "2026-07-01",
+  "matches": [
+    {
+      "id": 537425,
+      "utcDate": "2026-07-01T01:00:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX",
+        "crest": "https://crests.football-data.org/769.svg"
+      },
+      "away": {
+        "name": "Ecuador",
+        "shortName": "Ecuador",
+        "tla": "ECU",
+        "crest": "https://crests.football-data.org/791.svg"
+      },
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "scorers_home": [
+        "22' Julián Quiñones",
+        "31' Raúl Jiménez"
+      ],
+      "scorers_away": []
+    }
+  ]
 }
