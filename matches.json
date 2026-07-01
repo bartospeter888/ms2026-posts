@@ -53,6 +53,34 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537422,
+      "utcDate": "2026-07-01T20:00:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "Belgium",
+        "shortName": "Belgium",
+        "tla": "BEL",
+        "crest": "https://crests.football-data.org/805.svg"
+      },
+      "away": {
+        "name": "Senegal",
+        "shortName": "Senegal",
+        "tla": "SEN",
+        "crest": "https://crests.football-data.org/senegal.svg"
+      },
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "scorers_home": [],
+      "scorers_away": [
+        "25' Habib Diarra",
+        "51' Ismaïla Sarr"
+      ]
     }
   ]
 }
