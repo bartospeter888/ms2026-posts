@@ -52,6 +52,34 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537429,
+      "utcDate": "2026-07-03T03:00:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "Switzerland",
+        "shortName": "Switzerland",
+        "tla": "SUI",
+        "crest": "https://crests.football-data.org/788.svg"
+      },
+      "away": {
+        "name": "Algeria",
+        "shortName": "Algeria",
+        "tla": "ALG",
+        "crest": "https://crests.football-data.org/algeria.svg"
+      },
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "scorers_home": [
+        "10' Breel Embolo",
+        "46' Dan Ndoye"
+      ],
+      "scorers_away": []
     }
   ]
 }
