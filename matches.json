@@ -27,6 +27,31 @@
         "36' Mikel Oyarzabal"
       ],
       "scorers_away": []
+    },
+    {
+      "id": 537419,
+      "utcDate": "2026-07-02T23:00:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR",
+        "crest": "https://crests.football-data.org/765.svg"
+      },
+      "away": {
+        "name": "Croatia",
+        "shortName": "Croatia",
+        "tla": "CRO",
+        "crest": "https://crests.football-data.org/799.svg"
+      },
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
