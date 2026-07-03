@@ -28,6 +28,35 @@
         "46' Dan Ndoye"
       ],
       "scorers_away": []
+    },
+    {
+      "id": 537428,
+      "utcDate": "2026-07-03T18:00:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "Australia",
+        "shortName": "Australia",
+        "tla": "AUS",
+        "crest": "https://crests.football-data.org/779.svg"
+      },
+      "away": {
+        "name": "Egypt",
+        "shortName": "Egypt",
+        "tla": "EGY",
+        "crest": "https://crests.football-data.org/825.svg"
+      },
+      "score": {
+        "home": 3,
+        "away": 5
+      },
+      "scorers_home": [
+        "55' Mohamed Hany (vlastní gól)"
+      ],
+      "scorers_away": [
+        "13' Emam Ashour"
+      ]
     }
   ]
 }
