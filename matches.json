@@ -57,6 +57,38 @@
       "scorers_away": [
         "13' Emam Ashour"
       ]
+    },
+    {
+      "id": 537427,
+      "utcDate": "2026-07-03T22:00:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "Argentina",
+        "shortName": "Argentina",
+        "tla": "ARG",
+        "crest": "https://crests.football-data.org/762.png"
+      },
+      "away": {
+        "name": "Cape Verde Islands",
+        "shortName": "Cape Verde",
+        "tla": "CPV",
+        "crest": "https://crests.football-data.org/cape_verde.svg"
+      },
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "scorers_home": [
+        "29' Lionel Messi",
+        "93' Lisandro Martínez",
+        "111' Cristian Romero"
+      ],
+      "scorers_away": [
+        "59' Deroy Duarte",
+        "102' Sidny Lopes Cabral"
+      ]
     }
   ]
 }
