@@ -89,6 +89,33 @@
         "59' Deroy Duarte",
         "102' Sidny Lopes Cabral"
       ]
+    },
+    {
+      "id": 537430,
+      "utcDate": "2026-07-04T01:30:00Z",
+      "matchday": null,
+      "stage": "LAST_32",
+      "group": null,
+      "home": {
+        "name": "Colombia",
+        "shortName": "Colombia",
+        "tla": "COL",
+        "crest": "https://crests.football-data.org/818.svg"
+      },
+      "away": {
+        "name": "Ghana",
+        "shortName": "Ghana",
+        "tla": "GHA",
+        "crest": "https://crests.football-data.org/ghana.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "scorers_home": [
+        "14' Jhon Arias"
+      ],
+      "scorers_away": []
     }
   ]
 }
