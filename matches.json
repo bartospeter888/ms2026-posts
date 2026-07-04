@@ -27,6 +27,31 @@
         "14' Jhon Arias"
       ],
       "scorers_away": []
+    },
+    {
+      "id": 537376,
+      "utcDate": "2026-07-04T17:00:00Z",
+      "matchday": null,
+      "stage": "LAST_16",
+      "group": null,
+      "home": {
+        "name": "Canada",
+        "shortName": "Canada",
+        "tla": "CAN",
+        "crest": "https://crests.football-data.org/canada.svg"
+      },
+      "away": {
+        "name": "Morocco",
+        "shortName": "Morocco",
+        "tla": "MAR",
+        "crest": "https://crests.football-data.org/morocco.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
