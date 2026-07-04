@@ -52,6 +52,33 @@
       },
       "scorers_home": [],
       "scorers_away": []
+    },
+    {
+      "id": 537375,
+      "utcDate": "2026-07-04T21:00:00Z",
+      "matchday": null,
+      "stage": "LAST_16",
+      "group": null,
+      "home": {
+        "name": "Paraguay",
+        "shortName": "Paraguay",
+        "tla": "PAR",
+        "crest": "https://crests.football-data.org/761.svg"
+      },
+      "away": {
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "scorers_home": [],
+      "scorers_away": [
+        "70' Kylian Mbappé"
+      ]
     }
   ]
 }
