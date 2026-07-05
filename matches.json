@@ -1,84 +1,32 @@
 {
-  "date": "2026-07-04",
+  "date": "2026-07-05",
   "matches": [
     {
-      "id": 537430,
-      "utcDate": "2026-07-04T01:30:00Z",
+      "id": 537377,
+      "utcDate": "2026-07-05T20:00:00Z",
       "matchday": null,
-      "stage": "LAST_32",
+      "stage": "LAST_16",
       "group": null,
       "home": {
-        "name": "Colombia",
-        "shortName": "Colombia",
-        "tla": "COL",
-        "crest": "https://crests.football-data.org/818.svg"
+        "name": "Brazil",
+        "shortName": "Brazil",
+        "tla": "BRA",
+        "crest": "https://crests.football-data.org/764.svg"
       },
       "away": {
-        "name": "Ghana",
-        "shortName": "Ghana",
-        "tla": "GHA",
-        "crest": "https://crests.football-data.org/ghana.svg"
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR",
+        "crest": "https://crests.football-data.org/813.svg"
       },
       "score": {
         "home": 1,
-        "away": 0
+        "away": 2
       },
       "scorers_home": [
-        "14' Jhon Arias"
+        "14' Bruno Guimarães"
       ],
       "scorers_away": []
-    },
-    {
-      "id": 537376,
-      "utcDate": "2026-07-04T17:00:00Z",
-      "matchday": null,
-      "stage": "LAST_16",
-      "group": null,
-      "home": {
-        "name": "Canada",
-        "shortName": "Canada",
-        "tla": "CAN",
-        "crest": "https://crests.football-data.org/canada.svg"
-      },
-      "away": {
-        "name": "Morocco",
-        "shortName": "Morocco",
-        "tla": "MAR",
-        "crest": "https://crests.football-data.org/morocco.svg"
-      },
-      "score": {
-        "home": 0,
-        "away": 3
-      },
-      "scorers_home": [],
-      "scorers_away": []
-    },
-    {
-      "id": 537375,
-      "utcDate": "2026-07-04T21:00:00Z",
-      "matchday": null,
-      "stage": "LAST_16",
-      "group": null,
-      "home": {
-        "name": "Paraguay",
-        "shortName": "Paraguay",
-        "tla": "PAR",
-        "crest": "https://crests.football-data.org/761.svg"
-      },
-      "away": {
-        "name": "France",
-        "shortName": "France",
-        "tla": "FRA",
-        "crest": "https://crests.football-data.org/773.svg"
-      },
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "scorers_home": [],
-      "scorers_away": [
-        "70' Kylian Mbappé"
-      ]
     }
   ]
 }
