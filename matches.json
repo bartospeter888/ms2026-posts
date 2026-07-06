@@ -1,62 +1,30 @@
 {
-  "date": "2026-07-05",
+  "date": "2026-07-06",
   "matches": [
     {
-      "id": 537377,
-      "utcDate": "2026-07-05T20:00:00Z",
+      "id": 537379,
+      "utcDate": "2026-07-06T19:00:00Z",
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
       "home": {
-        "name": "Brazil",
-        "shortName": "Brazil",
-        "tla": "BRA",
-        "crest": "https://crests.football-data.org/764.svg"
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR",
+        "crest": "https://crests.football-data.org/765.svg"
       },
       "away": {
-        "name": "Norway",
-        "shortName": "Norway",
-        "tla": "NOR",
-        "crest": "https://crests.football-data.org/813.svg"
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP",
+        "crest": "https://crests.football-data.org/760.svg"
       },
       "score": {
-        "home": 1,
-        "away": 2
+        "home": 0,
+        "away": 1
       },
-      "scorers_home": [
-        "14' Bruno Guimarães"
-      ],
+      "scorers_home": [],
       "scorers_away": []
-    },
-    {
-      "id": 537378,
-      "utcDate": "2026-07-06T01:00:00Z",
-      "matchday": null,
-      "stage": "LAST_16",
-      "group": null,
-      "home": {
-        "name": "Mexico",
-        "shortName": "Mexico",
-        "tla": "MEX",
-        "crest": "https://crests.football-data.org/769.svg"
-      },
-      "away": {
-        "name": "England",
-        "shortName": "England",
-        "tla": "ENG",
-        "crest": "https://crests.football-data.org/770.svg"
-      },
-      "score": {
-        "home": 2,
-        "away": 3
-      },
-      "scorers_home": [
-        "42' Julián Quiñones"
-      ],
-      "scorers_away": [
-        "36' Jude Bellingham",
-        "38' Jude Bellingham"
-      ]
     }
   ]
 }
