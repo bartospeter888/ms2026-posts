@@ -59,6 +59,31 @@
       "scorers_away": [
         "15' Yasser Ibrahim"
       ]
+    },
+    {
+      "id": 537382,
+      "utcDate": "2026-07-07T20:00:00Z",
+      "matchday": null,
+      "stage": "LAST_16",
+      "group": null,
+      "home": {
+        "name": "Switzerland",
+        "shortName": "Switzerland",
+        "tla": "SUI",
+        "crest": "https://crests.football-data.org/788.svg"
+      },
+      "away": {
+        "name": "Colombia",
+        "shortName": "Colombia",
+        "tla": "COL",
+        "crest": "https://crests.football-data.org/818.svg"
+      },
+      "score": {
+        "home": 4,
+        "away": 3
+      },
+      "scorers_home": [],
+      "scorers_away": []
     }
   ]
 }
