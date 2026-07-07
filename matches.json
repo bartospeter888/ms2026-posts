@@ -1,4 +1,35 @@
 {
-  "date": "",
-  "matches": []
+  "date": "2026-07-07",
+  "matches": [
+    {
+      "id": 537380,
+      "utcDate": "2026-07-07T00:00:00Z",
+      "matchday": null,
+      "stage": "LAST_16",
+      "group": null,
+      "home": {
+        "name": "United States",
+        "shortName": "USA",
+        "tla": "USA",
+        "crest": "https://crests.football-data.org/usa.svg"
+      },
+      "away": {
+        "name": "Belgium",
+        "shortName": "Belgium",
+        "tla": "BEL",
+        "crest": "https://crests.football-data.org/805.svg"
+      },
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "scorers_home": [
+        "31' Malik Tillman"
+      ],
+      "scorers_away": [
+        "9' Charles De Ketelaere",
+        "33' Charles De Ketelaere"
+      ]
+    }
+  ]
 }
