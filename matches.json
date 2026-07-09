@@ -1,4 +1,34 @@
 {
-  "date": "",
-  "matches": []
+  "date": "2026-07-09",
+  "matches": [
+    {
+      "id": 537383,
+      "utcDate": "2026-07-09T20:00:00Z",
+      "matchday": null,
+      "stage": "QUARTER_FINALS",
+      "group": null,
+      "home": {
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
+      },
+      "away": {
+        "name": "Morocco",
+        "shortName": "Morocco",
+        "tla": "MAR",
+        "crest": "https://crests.football-data.org/morocco.svg"
+      },
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "scorers_home": [
+        "28' Kylian Mbappé",
+        "60' Kylian Mbappé",
+        "66' Ousmane Dembélé"
+      ],
+      "scorers_away": []
+    }
+  ]
 }
