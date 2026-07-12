@@ -1,33 +1,33 @@
 {
-  "date": "2026-07-10",
+  "date": "2026-07-11",
   "matches": [
     {
-      "id": 537384,
-      "utcDate": "2026-07-10T19:00:00Z",
+      "id": 537385,
+      "utcDate": "2026-07-11T21:00:00Z",
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
       "home": {
-        "name": "Spain",
-        "shortName": "Spain",
-        "tla": "ESP",
-        "crest": "https://crests.football-data.org/760.svg"
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR",
+        "crest": "https://crests.football-data.org/813.svg"
       },
       "away": {
-        "name": "Belgium",
-        "shortName": "Belgium",
-        "tla": "BEL",
-        "crest": "https://crests.football-data.org/805.svg"
+        "name": "England",
+        "shortName": "England",
+        "tla": "ENG",
+        "crest": "https://crests.football-data.org/770.svg"
       },
       "score": {
-        "home": 2,
-        "away": 1
+        "home": 1,
+        "away": 2
       },
       "scorers_home": [
-        "30' Fabián Ruiz"
+        "36' Andreas Schjelderup"
       ],
       "scorers_away": [
-        "41' Charles De Ketelaere"
+        "45' Jude Bellingham"
       ]
     }
   ]
