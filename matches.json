@@ -1,4 +1,32 @@
 {
-  "date": "",
-  "matches": []
+  "date": "2026-07-14",
+  "matches": [
+    {
+      "id": 537387,
+      "utcDate": "2026-07-14T19:00:00Z",
+      "matchday": null,
+      "stage": "SEMI_FINALS",
+      "group": null,
+      "home": {
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
+      },
+      "away": {
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP",
+        "crest": "https://crests.football-data.org/760.svg"
+      },
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "scorers_home": [],
+      "scorers_away": [
+        "22' Mikel Oyarzabal"
+      ]
+    }
+  ]
 }
